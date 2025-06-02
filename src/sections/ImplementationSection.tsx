@@ -11,12 +11,13 @@ const ImplementationSection: React.FC = () => {
           subtitle="Мы обеспечиваем полное сопровождение на всех этапах внедрения Support360"
           center
         />
-        <div className="grid grid-cols-2 gap-4 ml-10 mr-10">
-          <div className="mt-16 relative">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {/* Картинка - первая на десктопе, вторая на мобильных */}
+          <div className="order-2 md:order-1 mt-8 md:mt-16 relative">
             <img 
               src="devices.png" 
               alt="Support360 на разных устройствах" 
-              className="w-auto h-auto"
+              className="w-auto h-auto mx-auto"
             />
 
             <div className="absolute bottom-1 left-0 bg-white p-4 rounded-lg shadow-lg animate-bounce-slow parallax-element">
@@ -34,8 +35,9 @@ const ImplementationSection: React.FC = () => {
             </div>
           </div>
 
-          <div className="space-y-4 mt-0">
-            <div className="grid grid-cols-1 md:grid-row-3 gap-8 mt-12">
+          {/* Контент - второй на десктопе, первый на мобильных */}
+          <div className="space-y-4 order-1 md:order-2">
+            <div className="grid grid-cols-1 gap-8">
               <div className="bg-white p-5 rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
                 <div className="flex items-start gap-3"> 
                   <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">

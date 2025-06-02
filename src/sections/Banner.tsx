@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import Button from '../components/Button';
-import { CheckCircle2, ArrowUp } from 'lucide-react';
+import { CheckCircle2, ArrowDown } from 'lucide-react';
 
 const Banner: React.FC = () => {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -68,13 +68,13 @@ const Banner: React.FC = () => {
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center md:justify-start relative">
               <div className="relative">
                 <a href="https://t.me/dev_support360_bot" target="_blank" rel="noopener noreferrer">
+                <div className="absolute -top-5 left-1/2 -translate-x-1/2 ">
+                  <ArrowDown className="w-10 h-10 text-white animate-bounce" />
+                </div>
                   <Button className="text-[calc(0.8rem_+_0.3vw)] px-[calc(1rem_+_0.5vw)] py-[calc(0.5rem_+_0.3vw)] w-full !bg-primary !text-white hover:!bg-primary-dark">
                     Посмотреть демо
                   </Button>
                 </a>
-                <div className="absolute left-1/2 -translate-x-1/2 bottom--1">
-                  <ArrowUp className="w-8 h-8 text-white animate-bounce" />
-                </div>
               </div>
               <Button onClick={scrollToContact} className="text-[calc(0.8rem_+_0.3vw)] px-[calc(1rem_+_0.5vw)] py-[calc(0.5rem_+_0.3vw)] w-full !text-white border-white hover:!bg-white/10">
                 Узнать больше
