@@ -33,7 +33,7 @@ const useCases = [
         "Контроль выполнения заявок",
         "Статистика по типам обращений"
       ],
-      image: "https://images.pexels.com/photos/3663530/pexels-photo-3663530.jpeg"
+      image: "/home/project/public/apartments.jpg"
     }
   },
   {
