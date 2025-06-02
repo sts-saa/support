@@ -14,7 +14,7 @@ const ImplementationSection: React.FC = () => {
         <div className="grid grid-cols-2 gap-4">
           <div className="mt-16 relative">
             <img 
-              src="/devices.png" 
+              src="devices.png" 
               alt="Support360 на разных устройствах" 
               className="w-auto h-auto"
             />

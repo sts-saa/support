@@ -85,7 +85,7 @@ const Banner: React.FC = () => {
           <div className="flex justify-center relative w-full h-full min-h-[600px]">
             <div className="w-full h-full max-w-2xl parallax-element" data-speed="-15">
               <img 
-                src="/mockup.png" 
+                src="mockup.png" 
                 alt="Support360 Dashboard" 
                 className="w-full h-full object-contain"
               />
