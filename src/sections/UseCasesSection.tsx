@@ -81,7 +81,7 @@ const useCases = [
         "Статистика по типам обращений",
         "Обратная связь в реальном времени"
       ],
-      image: "https://images.pexels.com/photos/2608517/pexels-photo-2608517.jpeg"
+      image: "/public/event.jpg"
     }
   }
 ];
