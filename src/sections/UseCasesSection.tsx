@@ -17,7 +17,7 @@ const useCases = [
         "Отслеживание времени реакции персонала",
         "Повышение удовлетворенности гостей благодаря быстрому решению проблем"
       ],
-      image: "https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg"
+      image: "/home/project/public/hotel.jpeg"
     }
   },
   {
