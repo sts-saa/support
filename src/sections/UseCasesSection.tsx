@@ -49,7 +49,7 @@ const useCases = [
         "Контроль SLA по категориям",
         "База знаний для самообслуживания"
       ],
-      image: "https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg"
+      image: "/public/it.jpeg"
     }
   },
   {
