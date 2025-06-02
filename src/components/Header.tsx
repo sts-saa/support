@@ -26,6 +26,7 @@ const Header: React.FC = () => {
   };
 
   const refreshPage = () => {
+    window.location.reload();
     window.scrollTo(0, 0);
   };
   
