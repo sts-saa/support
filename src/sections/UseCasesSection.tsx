@@ -17,7 +17,7 @@ const useCases = [
         "Отслеживание времени реакции персонала",
         "Повышение удовлетворенности гостей благодаря быстрому решению проблем"
       ],
-      image: "/home/project/public/hotel.jpeg"
+      image: "/ublic/hotel.jpeg"
     }
   },
   {
@@ -33,7 +33,7 @@ const useCases = [
         "Контроль выполнения заявок",
         "Статистика по типам обращений"
       ],
-      image: "/home/project/public/apartments.jpg"
+      image: "/public/apartments.jpg"
     }
   },
   {
