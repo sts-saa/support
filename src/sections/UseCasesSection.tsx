@@ -17,7 +17,7 @@ const useCases = [
         "Отслеживание времени реакции персонала",
         "Повышение удовлетворенности гостей благодаря быстрому решению проблем"
       ],
-      image: "/home/project/public/hotel.jpeg"
+      image: "/hotel.jpeg"
     }
   },
   {
@@ -33,7 +33,7 @@ const useCases = [
         "Контроль выполнения заявок",
         "Статистика по типам обращений"
       ],
-      image: "/home/project/public/apartments.jpg"
+      image: "/apartments.jpg"
     }
   },
   {
@@ -49,7 +49,7 @@ const useCases = [
         "Контроль SLA по категориям",
         "База знаний для самообслуживания"
       ],
-      image: "/home/project/public/it.jpeg"
+      image: "/it.jpeg"
     }
   },
   {
@@ -65,7 +65,7 @@ const useCases = [
         "История взаимодействия с клиентом",
         "Интеграция с CRM-системой"
       ],
-      image: "/home/project/public/e-commerce .jpg"
+      image: "/e-commerce.jpg"
     }
   },
   {
@@ -81,7 +81,7 @@ const useCases = [
         "Статистика по типам обращений",
         "Обратная связь в реальном времени"
       ],
-      image: "/home/project/public/event.jpg"
+      image: "/event.jpg"
     }
   }
 ];
@@ -90,7 +90,7 @@ const UseCasesSection: React.FC = () => {
   const [selectedCase, setSelectedCase] = useState(useCases[0]);
 
   return (
-    <section id="use-cases\" className="py-20">
+    <section id="use-cases" className="py-20">
       <div className="container mx-auto px-4">
         <SectionTitle 
           title="Применение Support360"
