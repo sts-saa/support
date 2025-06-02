@@ -65,7 +65,7 @@ const useCases = [
         "История взаимодействия с клиентом",
         "Интеграция с CRM-системой"
       ],
-      image: "/home/project/public/e-commerce.jpg"
+      image: "/public/e-commerce.jpg"
     }
   },
   {
