@@ -33,7 +33,7 @@ const useCases = [
         "Контроль выполнения заявок",
         "Статистика по типам обращений"
       ],
-      image: "https://images.pexels.com/photos/2462015/pexels-photo-2462015.jpeg"
+      image: "/home/project/public/apartments.jpg"
     }
   },
   {
@@ -49,7 +49,7 @@ const useCases = [
         "Контроль SLA по категориям",
         "База знаний для самообслуживания"
       ],
-      image: "https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg"
+      image: "/home/project/public/it.jpeg"
     }
   },
   {
@@ -65,7 +65,7 @@ const useCases = [
         "История взаимодействия с клиентом",
         "Интеграция с CRM-системой"
       ],
-      image: "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg"
+      image: "/home/project/public/e-commerce .jpg"
     }
   },
   {
@@ -81,7 +81,7 @@ const useCases = [
         "Статистика по типам обращений",
         "Обратная связь в реальном времени"
       ],
-      image: "https://images.pexels.com/photos/2608517/pexels-photo-2608517.jpeg"
+      image: "/home/project/public/event.jpg"
     }
   }
 ];
