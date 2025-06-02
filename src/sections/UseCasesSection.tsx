@@ -17,6 +17,7 @@ const useCases = [
         "Отслеживание времени реакции персонала",
         "Повышение удовлетворенности гостей благодаря быстрому решению проблем"
       ],
+      message:"Информация о локации: комната 305",
       image: "hotel.jpeg"
     }
   },
@@ -33,6 +34,7 @@ const useCases = [
         "Контроль выполнения заявок",
         "Статистика по типам обращений"
       ],
+      message:"Информация о локации: квартира 128",
       image: "apartments.jpg"
     }
   },
@@ -49,6 +51,7 @@ const useCases = [
         "Контроль SLA по категориям",
         "База знаний для самообслуживания"
       ],
+      message:"Информация о пользователе: Иванов Иван И.",
       image: "it.jpeg"
     }
   },
@@ -65,6 +68,7 @@ const useCases = [
         "История взаимодействия с клиентом",
         "Интеграция с CRM-системой"
       ],
+      message:"Информация о клиенте: Иванов Иван И.",
       image: "ecommerce.jpg"
     }
   },
@@ -81,6 +85,7 @@ const useCases = [
         "Статистика по типам обращений",
         "Обратная связь в реальном времени"
       ],
+      message:"Информация о мероприятии: BigEvent2026",
       image: "event.jpg"
     }
   }
@@ -90,7 +95,7 @@ const UseCasesSection: React.FC = () => {
   const [selectedCase, setSelectedCase] = useState(useCases[0]);
 
   return (
-    <section id="use-cases\" className="py-20">
+    <section id="use-cases\" className="py-20 ml-10 mr-10">
       <div className="container mx-auto px-4">
         <SectionTitle 
           title="Применение Support360"
@@ -109,7 +114,7 @@ const UseCasesSection: React.FC = () => {
                   : ''
               }`}
             >
-              <UseCaseCard 
+              <UseCaseCard
                 icon={useCase.icon}
                 title={useCase.title}
                 description={useCase.description}
@@ -155,7 +160,7 @@ const UseCasesSection: React.FC = () => {
                   </div>
                   <p className="text-gray-800 mb-4">Добрый день! Чем я могу вам помочь?</p>
                   <div className="bg-primary/10 p-3 rounded text-primary text-sm">
-                    Информация о локации: {selectedCase === useCases[0] ? '305' : 'Определена автоматически'}
+                    {selectedCase.example.message}
                   </div>
                 </div>
               </div>

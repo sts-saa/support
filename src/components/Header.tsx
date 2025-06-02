@@ -63,24 +63,24 @@ const Header: React.FC = () => {
         </button>
         
         <nav className="hidden md:flex items-center space-x-8">
-          <a href="#features" className={`font-medium hover:text-primary transition-colors ${isScrolled ? 'text-gray-800' : 'text-white'}`}>
+          <a href="#features" className={`text-[calc(0.8rem_+_0.3vw)] px-[calc(1rem_+_0.5vw)] py-[calc(0.5rem_+_0.3vw)] font-medium hover:text-primary transition-colors ${isScrolled ? 'text-gray-800' : 'text-white'}`}>
             Функции
           </a>
-          <a href="#how-it-works" className={`font-medium hover:text-primary transition-colors ${isScrolled ? 'text-gray-800' : 'text-white'}`}>
+          <a href="#how-it-works" className={`text-[calc(0.8rem_+_0.3vw)] px-[calc(1rem_+_0.5vw)] py-[calc(0.5rem_+_0.3vw)] font-medium hover:text-primary transition-colors ${isScrolled ? 'text-gray-800' : 'text-white'}`}>
             Как это работает
           </a>
-          <a href="#use-cases" className={`font-medium hover:text-primary transition-colors ${isScrolled ? 'text-gray-800' : 'text-white'}`}>
+          <a href="#use-cases" className={`text-[calc(0.8rem_+_0.3vw)] px-[calc(1rem_+_0.5vw)] py-[calc(0.5rem_+_0.3vw)] font-medium hover:text-primary transition-colors ${isScrolled ? 'text-gray-800' : 'text-white'}`}>
             Применение
           </a>
-          <a href="#implementation" className={`font-medium hover:text-primary transition-colors ${isScrolled ? 'text-gray-800' : 'text-white'}`}>
+          <a href="#implementation" className={`text-[calc(0.8rem_+_0.3vw)] px-[calc(1rem_+_0.5vw)] py-[calc(0.5rem_+_0.3vw)] font-medium hover:text-primary transition-colors ${isScrolled ? 'text-gray-800' : 'text-white'}`}>
             Внедрение
           </a>
-          <a href="#faq" className={`font-medium hover:text-primary transition-colors ${isScrolled ? 'text-gray-800' : 'text-white'}`}>
+          <a href="#faq" className={`text-[calc(0.8rem_+_0.3vw)] px-[calc(1rem_+_0.5vw)] py-[calc(0.5rem_+_0.3vw)] font-medium hover:text-primary transition-colors ${isScrolled ? 'text-gray-800' : 'text-white'}`}>
             FAQ
           </a>
         </nav>
         
-        <div className="hidden md:flex items-center space-x-4">
+        <div className="text-[calc(0.8rem_+_0.3vw)] px-[calc(1rem_+_0.5vw)] py-[calc(0.5rem_+_0.3vw)] hidden md:flex items-center space-x-4">
           <Button 
             onClick={scrollToContact}
             className={`${isScrolled 

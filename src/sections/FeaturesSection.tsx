@@ -18,13 +18,14 @@ const FeaturesSection: React.FC = () => {
   return (
     <section id="features" className="py-20">
       <div className="container mx-auto px-4">
+
         <SectionTitle 
           title="Функции Support360"
           subtitle="Мощный инструмент технической поддержки в формате привычного мессенджера"
           center
         />
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 ml-10 mr-10">
           <FeatureCard 
             icon={<MessageSquareIcon />}
             title="Общение как в мессенджере"

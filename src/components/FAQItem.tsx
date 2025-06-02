@@ -29,7 +29,12 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer }) => {
         </svg>
       </button>
       <div className={`overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-96 pb-4' : 'max-h-0'}`}>
-        <p className="text-gray-600">{answer}</p>
+        <p className="text-gray-600">{answer.split('\n').map((line, i) => (
+            <React.Fragment key={i}>
+              {line}
+              <br />
+            </React.Fragment>
+          ))}</p>
       </div>
     </div>
   );

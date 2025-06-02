@@ -56,8 +56,8 @@ const Banner: React.FC = () => {
         ></div>
       </div>
       
-      <div className="container mx-auto px-4 py-20 relative z-10">
-        <div className="flex flex-col md:flex-row items-center justify-center">
+      <div className="container mx-auto px-4 py-20 relative z-10 flex flex-col items-center">
+        <div className="flex flex-col lg:flex-row items-center justify-center w-full max-w-7xl">
           <div className="md:w-1/2 mb-10 md:mb-0 text-center md:text-left">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 tracking-tight">
               Техподдержка в формате <span className="text-light">мессенджера</span>
@@ -68,21 +68,21 @@ const Banner: React.FC = () => {
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center md:justify-start relative">
               <div className="relative">
                 <a href="https://t.me/dev_support360_bot" target="_blank" rel="noopener noreferrer">
-                  <Button className="w-full !bg-primary !text-white hover:!bg-primary-dark">
-                    Демо
+                  <Button className="text-[calc(0.8rem_+_0.3vw)] px-[calc(1rem_+_0.5vw)] py-[calc(0.5rem_+_0.3vw)] w-full !bg-primary !text-white hover:!bg-primary-dark">
+                    Посмотреть демо
                   </Button>
                 </a>
-                <div className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2">
+                <div className="absolute left-1/2 -translate-x-1/2 bottom--1">
                   <ArrowUp className="w-8 h-8 text-white animate-bounce" />
                 </div>
               </div>
-              <Button onClick={scrollToContact} className="w-full !text-white border-white hover:!bg-white/10">
+              <Button onClick={scrollToContact} className="text-[calc(0.8rem_+_0.3vw)] px-[calc(1rem_+_0.5vw)] py-[calc(0.5rem_+_0.3vw)] w-full !text-white border-white hover:!bg-white/10">
                 Узнать больше
               </Button>
             </div>
           </div>
           
-          <div className="flex justify-center relative w-full h-full min-h-[600px]">
+          <div className="flex justify-center relative w-full h-full min-h-[600px] ml-16">
             <div className="w-full h-full max-w-2xl parallax-element" data-speed="-15">
               <img 
                 src="mockup.png" 

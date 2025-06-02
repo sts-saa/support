@@ -11,7 +11,7 @@ const ImplementationSection: React.FC = () => {
           subtitle="Мы обеспечиваем полное сопровождение на всех этапах внедрения Support360"
           center
         />
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-2 gap-4 ml-10 mr-10">
           <div className="mt-16 relative">
             <img 
               src="devices.png" 
@@ -19,16 +19,16 @@ const ImplementationSection: React.FC = () => {
               className="w-auto h-auto"
             />
 
-            <div className="absolute bottom-1/4 left-0 bg-white p-4 rounded-lg shadow-lg animate-bounce-slow parallax-element">
+            <div className="absolute bottom-1 left-0 bg-white p-4 rounded-lg shadow-lg animate-bounce-slow parallax-element">
               <div className="flex items-center space-x-3">
-                <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center">
-                  <svg className="w-10 h-10 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                  <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
                   </svg>
                 </div>
                 <div>
-                  <p className="font-semibold text-gray-800 text-xl">Support360</p>
-                  <p className="text-sm text-gray-600">Ваши клиенты всегда на связи</p>
+                  <p className="font-semibold text-gray-800">Support360</p>
+                  <p className="text-sm text-gray-600">Будьте всегда на связи с клиентами</p>
                 </div>
               </div>
             </div>

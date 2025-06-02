@@ -12,7 +12,7 @@ const HowItWorksSection: React.FC = () => {
           center
         />
         
-        <div className="flex flex-col lg:flex-row items-center lg:items-start gap-12">
+        <div className="flex flex-col lg:flex-row items-center lg:items-start gap-12 ml-10 mr-10">
           <div className="lg:w-1/2">
           <h3 className="text-2xl font-bold text-gray-800 mb-6">Пример взаимодействия</h3> 
             <div className="mt-8 space-y-6">
