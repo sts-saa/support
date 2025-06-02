@@ -17,7 +17,7 @@ const useCases = [
         "Отслеживание времени реакции персонала",
         "Повышение удовлетворенности гостей благодаря быстрому решению проблем"
       ],
-      image: "/public/hotel.jpeg"
+      image: "https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg"
     }
   },
   {
@@ -33,7 +33,7 @@ const useCases = [
         "Контроль выполнения заявок",
         "Статистика по типам обращений"
       ],
-      image: "/public/apartments.jpg"
+      image: "https://images.pexels.com/photos/2462015/pexels-photo-2462015.jpeg"
     }
   },
   {
@@ -49,7 +49,7 @@ const useCases = [
         "Контроль SLA по категориям",
         "База знаний для самообслуживания"
       ],
-      image: "/public/it.jpeg"
+      image: "https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg"
     }
   },
   {
@@ -65,7 +65,7 @@ const useCases = [
         "История взаимодействия с клиентом",
         "Интеграция с CRM-системой"
       ],
-      image: "/public/e-commerce.jpg"
+      image: "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg"
     }
   },
   {
@@ -81,7 +81,7 @@ const useCases = [
         "Статистика по типам обращений",
         "Обратная связь в реальном времени"
       ],
-      image: "/public/event.jpg"
+      image: "https://images.pexels.com/photos/2608517/pexels-photo-2608517.jpeg"
     }
   }
 ];
@@ -90,7 +90,7 @@ const UseCasesSection: React.FC = () => {
   const [selectedCase, setSelectedCase] = useState(useCases[0]);
 
   return (
-    <section id="use-cases\" className="py-20">
+    <section id="use-cases" className="py-20">
       <div className="container mx-auto px-4">
         <SectionTitle 
           title="Применение Support360"
@@ -103,7 +103,11 @@ const UseCasesSection: React.FC = () => {
             <div 
               key={index} 
               onClick={() => setSelectedCase(useCase)}
-              className="cursor-pointer transform transition-all duration-300 hover:scale-105"
+              className={`cursor-pointer transform transition-all duration-300 hover:scale-105 ${
+                selectedCase.title === useCase.title 
+                  ? 'ring-2 ring-primary rounded-lg ring-offset-2' 
+                  : ''
+              }`}
             >
               <UseCaseCard 
                 icon={useCase.icon}
