@@ -90,7 +90,7 @@ const UseCasesSection: React.FC = () => {
   const [selectedCase, setSelectedCase] = useState(useCases[0]);
 
   return (
-    <section id="use-cases" className="py-20">
+    <section id="use-cases\" className="py-20">
       <div className="container mx-auto px-4">
         <SectionTitle 
           title="Применение Support360"
