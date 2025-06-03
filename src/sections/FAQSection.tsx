@@ -4,7 +4,7 @@ import FAQItem from '../components/FAQItem';
 
 const faqItems = [
   {
-    question: "Как быстро происходит внедрение?",Add commentMore actions
+    question: "Как быстро происходит внедрение?",
     answer: "Support360 готов к запуску в течение 1–3 дней после настройки под ваш домен и базовых параметров."
   },
   {
@@ -64,3 +64,5 @@ const FAQSection: React.FC = () => {
     </section>
   );
 };
+
+export default FAQSection;
