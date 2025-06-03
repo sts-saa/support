@@ -100,8 +100,7 @@ const ContactSection: React.FC = () => {
                       onChange={handleChange}
                       className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                       placeholder="Ваше имя"
-                      required
-                    />
+                      required/>
                   </div>
 
                   <div>

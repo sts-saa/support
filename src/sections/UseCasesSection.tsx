@@ -129,7 +129,7 @@ const UseCasesSection: React.FC = () => {
             <div key={index} className="flex flex-col">
               <div
                 onClick={() => handleCardClick(index)}
-                className={`cursor-pointer ${selectedCase.title === useCase.title ? 'ring-2 ring-primary rounded-lg' : 'h-full'}`}
+                className={`cursor-pointer ${selectedCase.title === useCase.title ? 'ring-2 ring-primary rounded-lg h-full' : 'h-full'}`}
               >
                 <UseCaseCard
                   icon={useCase.icon}
