@@ -3,7 +3,7 @@ import FAQItem from '../components/FAQItem';
 
 const faqItems = [
   {
-    question: "Как быстро происходит внедрение?",
+    question: "Как быстро происходит внедрение?",Add commentMore actions
     answer: "Support360 готов к запуску в течение 1–3 дней после настройки под ваш домен и базовых параметров."
   },
   {
@@ -73,7 +73,7 @@ const FAQSection: React.FC = () => {
           center
         />
 
-        <div className="max-w-3xl mx-auto bg-white rounded-xl shadow-md p-6 md:p-8">Add commentMore actions
+        <div className="max-w-3xl mx-auto bg-white rounded-xl shadow-md p-6 md:p-8">
           {faqItems.map((item, index) => (
             <FAQItem 
               key={index}
@@ -82,6 +82,9 @@ const FAQSection: React.FC = () => {
             />
           ))}
         </div>
+      </div>
+    </section>
   );
+};
 
 export default FAQSection;
