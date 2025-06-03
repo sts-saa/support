@@ -64,5 +64,3 @@ const FAQSection: React.FC = () => {
     </section>
   );
 };
-
-export default FAQSection;
