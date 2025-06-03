@@ -112,7 +112,7 @@ const Banner: React.FC = () => {
             </div>
           </div>
         </div>
-      </div>More actions
+      </div>
     </section>
   );
 };
