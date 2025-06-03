@@ -83,6 +83,5 @@ const FAQSection: React.FC = () => {
           ))}
         </div>
   );
-};
 
 export default FAQSection;
