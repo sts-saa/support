@@ -44,7 +44,7 @@ const StatisticsSection: React.FC = () => {
             <div key={index} className="text-center flex flex-col items-center justify-center">
               {stat.value ? (
                 <div className="relative inline-block w-32 h-32">
-                  <svg className="w-full h-full" viewBox="0 0 100 100">
+                  <svg className="w-full h-full\" viewBox="0 0 100 100">
                     <circle 
                       cx="50" 
                       cy="50" 
