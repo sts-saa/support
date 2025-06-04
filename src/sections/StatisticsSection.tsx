@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
 
 const statistics = [
-  { value: 75, label: 'Сокращение времени обработки обращений', symbol: '%' },
-  { value: 85, label: 'Повышение удовлетворенности клиентов', symbol: '%' },
+  { value: 75, label: 'Быстрее обработка обращений', symbol: '%' },
+  { value: 85, label: 'Довольных клиентов', symbol: '%' },
   { value: 60, label: 'Снижение нагрузки на операторов', symbol: '%' },
-  { label: 'Быстрое внедрение', text: '1-3 дня' }
+  { label: 'Срок внедрения', text: '1-3 дня' }
 ];
 
 const StatisticsSection: React.FC = () => {
