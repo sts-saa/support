@@ -60,10 +60,10 @@ const Banner: React.FC = () => {
         <div className="flex flex-col lg:flex-row items-center justify-center w-full max-w-7xl">
           <div className="md:w-1/2 mb-10 md:mb-0 text-center md:text-left">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 tracking-tight">
-              Превратите техподдержку в <span className="text-light">конкурентное преимущество</span>
+              Техподдержка в формате <span className="text-light">мессенджера</span>
             </h1>
             <p className="text-xl text-gray-200 mb-8 max-w-lg mx-auto md:mx-0">
-              Support360 — это современная система технической поддержки, которая сокращает время обработки заявок на 75% и повышает удовлетворенность клиентов.
+              Support360 — это революционный сервис технической поддержки для B2B-рынка, который превращает сложную работу с тикетами в простой обмен сообщениями.
             </p>
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center md:justify-start relative">
               <div className="relative">
@@ -72,12 +72,12 @@ const Banner: React.FC = () => {
                   <ArrowDown className="w-10 h-10 text-white animate-bounce" />
                 </div>
                   <Button className="text-[calc(0.8rem_+_0.3vw)] px-[calc(1rem_+_0.5vw)] py-[calc(0.5rem_+_0.3vw)] w-full !bg-primary !text-white hover:!bg-primary-dark">
-                    Попробовать бесплатно
+                    Посмотреть демо
                   </Button>
                 </a>
               </div>
               <Button onClick={scrollToContact} className="text-[calc(0.8rem_+_0.3vw)] px-[calc(1rem_+_0.5vw)] py-[calc(0.5rem_+_0.3vw)] w-full !text-white border-white hover:!bg-white/10">
-                Получить демо
+                Узнать больше
               </Button>
             </div>
           </div>
@@ -94,11 +94,21 @@ const Banner: React.FC = () => {
                 <div className="flex items-center">
                   <CheckCircle2 className="w-6 h-6 text-green-500 mr-2" />
                   <div>
-                    <p className="font-semibold text-gray-800">Быстрый старт</p>
-                    <p className="text-sm text-gray-600">Внедрение за 1-3 дня без сложных настроек</p>
+                    <p className="font-semibold text-gray-800">Внедрение за 1-3 дня</p>
+                    <p className="text-sm text-gray-600">Быстрый старт без сложных настроек</p>
                   </div>
                 </div>
               </div>
+
+
+
+
+
+
+
+
+
+
             </div>
           </div>
         </div>
