@@ -60,11 +60,19 @@ const Banner: React.FC = () => {
         <div className="flex flex-col lg:flex-row items-center justify-center w-full max-w-7xl">
           <div className="md:w-1/2 mb-10 md:mb-0 text-center md:text-left">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 tracking-tight">
-              Техподдержка в формате <span className="text-light">мессенджера</span>
+              Превратите хаос заявок в <span className="text-light">простой диалог</span>
             </h1>
             <p className="text-xl text-gray-200 mb-8 max-w-lg mx-auto md:mx-0">
-              Support360 — это революционный сервис технической поддержки для B2B-рынка, который превращает сложную работу с тикетами в простой обмен сообщениями.
+              Support360 — сервис-деск нового поколения. Никаких форм и статусов — только понятное общение, как в мессенджере. Запуск за 15 минут.
             </p>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 mb-8 max-w-lg mx-auto md:mx-0">
+              <div className="flex items-center text-white">
+                <CheckCircle2 className="w-5 h-5 text-light mr-2 flex-shrink-0" />
+                <span className="text-sm">Заявка начинается с одного сообщения — всё остальное система берёт на себя</span>
+              </div>
+            </div>
+            
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center md:justify-start relative">
               <div className="relative">
                 <a href="https://t.me/dev_support360_bot" target="_blank" rel="noopener noreferrer">
@@ -72,7 +80,7 @@ const Banner: React.FC = () => {
                   <ArrowDown className="w-10 h-10 text-white animate-bounce" />
                 </div>
                   <Button className="text-[calc(0.8rem_+_0.3vw)] px-[calc(1rem_+_0.5vw)] py-[calc(0.5rem_+_0.3vw)] w-full !bg-primary !text-white hover:!bg-primary-dark">
-                    Посмотреть демо
+                    Попробовать демо
                   </Button>
                 </a>
               </div>
@@ -94,21 +102,11 @@ const Banner: React.FC = () => {
                 <div className="flex items-center">
                   <CheckCircle2 className="w-6 h-6 text-green-500 mr-2" />
                   <div>
-                    <p className="font-semibold text-gray-800">Внедрение за 1-3 дня</p>
-                    <p className="text-sm text-gray-600">Быстрый старт без сложных настроек</p>
+                    <p className="font-semibold text-gray-800">Запуск за 15 минут</p>
+                    <p className="text-sm text-gray-600">Без внедрения и обучения</p>
                   </div>
                 </div>
               </div>
-
-
-
-
-
-
-
-
-
-
             </div>
           </div>
         </div>

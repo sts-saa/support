@@ -74,8 +74,8 @@ const ContactSection: React.FC = () => {
     <section id="contact" className="py-20 bg-secondary">
       <div className="container mx-auto px-4">
         <SectionTitle 
-          title="Начните использовать Support360 уже сегодня"
-          subtitle="Свяжитесь с нами, чтобы узнать больше о нашем сервисе или запросить демо-доступ"
+          title="Хватит терять клиентов из-за плохой поддержки"
+          subtitle="Запустите Support360 уже завтра и увидите разницу. Первые результаты — в первый же день работы."
           center
           light
         />
@@ -83,28 +83,59 @@ const ContactSection: React.FC = () => {
         <div className="max-w-5xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
           <div className="md:flex">
             <div className="md:w-1/2 p-8 md:p-12">
-              <h3 className="text-2xl font-bold mb-6 text-gray-800">Свяжитесь с нами</h3>
+              <h3 className="text-2xl font-bold mb-6 text-gray-800">Получите персональную консультацию</h3>
+              
+              <div className="bg-gradient-to-r from-green-50 to-blue-50 border border-green-200 rounded-lg p-6 mb-6">
+                <h4 className="font-semibold text-gray-800 mb-3">Что вы получите:</h4>
+                <ul className="space-y-2 text-sm text-gray-700">
+                  <li className="flex items-start">
+                    <svg className="w-4 h-4 text-green-500 mt-0.5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    Анализ ваших текущих процессов поддержки
+                  </li>
+                  <li className="flex items-start">
+                    <svg className="w-4 h-4 text-green-500 mt-0.5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    Расчёт экономии от внедрения Support360
+                  </li>
+                  <li className="flex items-start">
+                    <svg className="w-4 h-4 text-green-500 mt-0.5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    Демонстрацию системы на ваших примерах
+                  </li>
+                  <li className="flex items-start">
+                    <svg className="w-4 h-4 text-green-500 mt-0.5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    План внедрения за 15 минут
+                  </li>
+                </ul>
+              </div>
               
               {isSubmitted ? (
                 <div className="bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded relative" role="alert">
-                  <p>Спасибо! Мы свяжемся с вами в ближайшее время.</p>
+                  <p className="font-semibold">Спасибо за заявку!</p>
+                  <p>Мы свяжемся с вами в течение 30 минут и покажем, как Support360 решит ваши задачи.</p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">Имя</label>
+                    <label className="block text-sm font-medium text-gray-700 mb-1">Ваше имя</label>
                     <input 
                       type="text"
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
                       className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-                      placeholder="Ваше имя"
+                      placeholder="Как к вам обращаться?"
                       required/>
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">Телефон</label>
+                    <label className="block text-sm font-medium text-gray-700 mb-1">Телефон для связи</label>
                     <input 
                       type="tel"
                       name="phone"
@@ -128,35 +159,39 @@ const ContactSection: React.FC = () => {
                     </div>
                     <div className="ml-3">
                       <label className="text-sm text-gray-700">
-                        Я принимаю{' '}
+                        Я согласен на обработку персональных данных согласно{' '}
                         <button
                           type="button"
                           onClick={() => setIsModalOpen(true)}
                           className="text-primary hover:underline focus:outline-none"
                         >
-                          правила пользовательского соглашения
+                          политике конфиденциальности
                         </button>
                       </label>
                       {showError && (
                         <p className="text-red-500 text-sm mt-1">
-                          Необходимо принять пользовательское соглашение
+                          Необходимо согласие на обработку данных
                         </p>
                       )}
                     </div>
                   </div>
                   
-                  <Button primary className="w-full">Отправить</Button>
+                  <Button primary className="w-full">Получить консультацию</Button>
+                  
+                  <p className="text-xs text-gray-500 text-center">
+                    Никакого спама — только полезная информация о том, как улучшить вашу поддержку
+                  </p>
                 </form>
               )}
             </div>
             
             <div className="md:w-1/2 bg-gray-50 p-8 md:p-12">
-              <h3 className="text-2xl font-bold mb-6 text-gray-800">Контактная информация</h3>
+              <h3 className="text-2xl font-bold mb-6 text-gray-800">Свяжитесь с нами прямо сейчас</h3>
               
               <div className="space-y-6">
                 <div>
-                  <p className="font-semibold text-gray-700">Адрес:</p>
-                  <p className="text-gray-600">630007, г. Новосибирск, ул. Большевистская, д.97</p>
+                  <p className="font-semibold text-gray-700">Компания:</p>
+                  <p className="text-gray-600">ООО "ИТ Лаборатория"</p>
                 </div>
                 
                 <div>
@@ -166,18 +201,25 @@ const ContactSection: React.FC = () => {
 
                 <div>
                   <p className="font-semibold text-gray-700">Телефон:</p>
-                  <a href="tel:+73833838004" className="text-primary hover:underline">+7 (383)-383-80-04</a>
+                  <a href="tel:+73833838004" className="text-primary hover:underline">+7 (383) 383-80-04</a>
                 </div>
 
                 <div>
-                  <p className="font-semibold text-gray-700">Компания:</p>
-                  <p className="text-gray-600">ООО "ИТ Лаборатория"</p>
+                  <p className="font-semibold text-gray-700">Адрес:</p>
+                  <p className="text-gray-600">630007, г. Новосибирск, ул. Большевистская, д.97</p>
                 </div>
 
                 <div className="pt-4">
-                  <p className="font-semibold text-gray-700 mb-3">Наши часы работы:</p>
-                  <p className="text-gray-600">пн-пт: 9:00 - 18:00</p>
-                  <p className="text-gray-600">сб-вс: Выходной</p>
+                  <p className="font-semibold text-gray-700 mb-3">Режим работы:</p>
+                  <p className="text-gray-600">Пн-Пт: 9:00 - 18:00 (МСК)</p>
+                  <p className="text-gray-600">Сб-Вс: Выходные</p>
+                </div>
+                
+                <div className="bg-primary/10 rounded-lg p-4">
+                  <p className="font-semibold text-primary mb-2">Экстренная связь</p>
+                  <p className="text-sm text-gray-700">
+                    Для действующих клиентов доступна круглосуточная поддержка через Support360
+                  </p>
                 </div>
               </div>
             </div>
