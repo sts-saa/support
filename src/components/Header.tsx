@@ -58,47 +58,50 @@ const Header: React.FC = () => {
               <line x1="4.93" y1="19.07" x2="9.17" y2="14.83" />
             </svg>
           </div>
-          <span className={`font-bold text-xl ${isScrolled ? 'text-primary' : 'text-white'}`}>
-            Support360
-          </span>
+          <div className="flex flex-col">
+            <span className={`font-bold text-xl ${isScrolled ? 'text-primary' : 'text-white'}`}>
+              Support360
+            </span>
+            <span className={`text-xs ${isScrolled ? 'text-gray-600' : 'text-gray-200'}`}>
+              Сервис-деск нового поколения
+            </span>
+          </div>
         </button>
         
-        <nav className="hidden md:flex items-center space-x-8">
-          <a href="#features" className={`text-[calc(0.8rem_+_0.3vw)] px-[calc(1rem_+_0.5vw)] py-[calc(0.5rem_+_0.3vw)] font-medium hover:text-primary transition-colors ${isScrolled ? 'text-gray-800' : 'text-white'}`}>
-            Функции
+        <nav className="hidden md:flex items-center space-x-6">
+          <a href="#how-it-works" className={`text-sm font-medium hover:text-primary transition-colors ${isScrolled ? 'text-gray-800' : 'text-white'}`}>
+            Наша история
           </a>
-          <a href="#how-it-works" className={`text-[calc(0.8rem_+_0.3vw)] px-[calc(1rem_+_0.5vw)] py-[calc(0.5rem_+_0.3vw)] font-medium hover:text-primary transition-colors ${isScrolled ? 'text-gray-800' : 'text-white'}`}>
-            Как это работает
+          <a href="#features" className={`text-sm font-medium hover:text-primary transition-colors ${isScrolled ? 'text-gray-800' : 'text-white'}`}>
+            Возможности
           </a>
-          <a href="#use-cases" className={`text-[calc(0.8rem_+_0.3vw)] px-[calc(1rem_+_0.5vw)] py-[calc(0.5rem_+_0.3vw)] font-medium hover:text-primary transition-colors ${isScrolled ? 'text-gray-800' : 'text-white'}`}>
-            Применение
+          <a href="#use-cases" className={`text-sm font-medium hover:text-primary transition-colors ${isScrolled ? 'text-gray-800' : 'text-white'}`}>
+            Кейсы
           </a>
-          <a href="#implementation" className={`text-[calc(0.8rem_+_0.3vw)] px-[calc(1rem_+_0.5vw)] py-[calc(0.5rem_+_0.3vw)] font-medium hover:text-primary transition-colors ${isScrolled ? 'text-gray-800' : 'text-white'}`}>
-            Внедрение
+          <a href="#implementation" className={`text-sm font-medium hover:text-primary transition-colors ${isScrolled ? 'text-gray-800' : 'text-white'}`}>
+            ИИ-модули
           </a>
-          <a href="#faq" className={`text-[calc(0.8rem_+_0.3vw)] px-[calc(1rem_+_0.5vw)] py-[calc(0.5rem_+_0.3vw)] font-medium hover:text-primary transition-colors ${isScrolled ? 'text-gray-800' : 'text-white'}`}>
-            FAQ
+          <a href="#faq" className={`text-sm font-medium hover:text-primary transition-colors ${isScrolled ? 'text-gray-800' : 'text-white'}`}>
+            Вопросы
           </a>
         </nav>
         
-        <div className="text-[calc(0.8rem_+_0.3vw)] px-[calc(1rem_+_0.5vw)] py-[calc(0.5rem_+_0.3vw)] hidden md:flex items-center space-x-4">
-          <Button 
-            onClick={scrollToContact}
-            className={`${isScrolled 
-              ? '!bg-primary !text-white hover:!bg-primary-dark' 
-              : '!bg-white !text-primary hover:!bg-gray-100 !border !border-transparent'}`}
-          >
-            Связаться с нами
-          </Button>
-          <a href="https://support360.ru/login" target="_blank" rel="noopener noreferrer">
-            <Button className={`!bg-transparent border-2 ${
-              isScrolled 
-                ? '!text-primary border-primary hover:!bg-primary/10' 
-                : '!text-white border-white hover:!bg-white/10'
-            }`}>
-              Вход/Регистрация
+        <div className="hidden md:flex items-center space-x-3">
+          <a href="https://t.me/dev_support360_bot" target="_blank" rel="noopener noreferrer">
+            <Button className={`text-sm px-4 py-2 ${isScrolled 
+              ? '!bg-transparent !text-primary border-2 border-primary hover:!bg-primary/10' 
+              : '!bg-white/10 !text-white border-2 border-white/30 hover:!bg-white/20 backdrop-blur-sm'}`}>
+              Демо
             </Button>
           </a>
+          <Button 
+            onClick={scrollToContact}
+            className={`text-sm px-4 py-2 ${isScrolled 
+              ? '!bg-primary !text-white hover:!bg-primary-dark' 
+              : '!bg-primary !text-white hover:!bg-primary-dark'}`}
+          >
+            Запустить за 15 минут
+          </Button>
         </div>
         
         <button 
@@ -143,48 +146,53 @@ const Header: React.FC = () => {
       {/* Mobile menu */}
       {isMobileMenuOpen && (
         <div className="md:hidden bg-white shadow-lg absolute w-full">
-          <div className="container mx-auto px-4 py-3 flex flex-col space-y-3">
+          <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
+            <a 
+              href="#how-it-works" 
+              className="font-medium py-2 hover:text-primary border-b border-gray-100"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Наша история
+            </a>
             <a 
               href="#features" 
-              className="font-medium py-2 hover:text-primary"
+              className="font-medium py-2 hover:text-primary border-b border-gray-100"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Возможности
             </a>
             <a 
-              href="#how-it-works" 
-              className="font-medium py-2 hover:text-primary"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Как это работает
-            </a>
-            <a 
               href="#use-cases" 
-              className="font-medium py-2 hover:text-primary"
+              className="font-medium py-2 hover:text-primary border-b border-gray-100"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Применение
+              Кейсы
             </a>
             <a 
               href="#implementation" 
-              className="font-medium py-2 hover:text-primary"
+              className="font-medium py-2 hover:text-primary border-b border-gray-100"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Внедрение
+              ИИ-модули
             </a>
             <a 
               href="#faq" 
-              className="font-medium py-2 hover:text-primary"
+              className="font-medium py-2 hover:text-primary border-b border-gray-100"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              FAQ
+              Вопросы
             </a>
-            <Button onClick={scrollToContact} className="mt-2">Связаться с нами</Button>
-            <a href="https://support360.ru/login" target="_blank" rel="noopener noreferrer">
-              <Button className="!bg-transparent !text-primary border-2 border-primary hover:!bg-primary/10 w-full">
-                Вход/Регистрация
+            
+            <div className="pt-4 space-y-3">
+              <a href="https://t.me/dev_support360_bot" target="_blank" rel="noopener noreferrer">
+                <Button className="!bg-transparent !text-primary border-2 border-primary hover:!bg-primary/10 w-full">
+                  Попробовать демо
+                </Button>
+              </a>
+              <Button onClick={scrollToContact} className="w-full">
+                Запустить за 15 минут
               </Button>
-            </a>
+            </div>
           </div>
         </div>
       )}
