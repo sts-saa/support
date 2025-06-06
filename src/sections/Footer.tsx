@@ -102,7 +102,7 @@ const Footer: React.FC = () => {
                   <a href="tel:+73833838004" className="text-white hover:text-primary transition-colors">
                     +7 (383) 383-80-04
                   </a>
-                  <p className="text-gray-400 text-sm">Пн-Пт: 9:00-18:00 (МСК)</p>
+                  <p className="text-gray-400 text-sm">Пн-Пт: 9:00-18:00 (НСК)</p>
                 </div>
               </li>
               
@@ -134,7 +134,7 @@ const Footer: React.FC = () => {
                 &copy; {new Date().getFullYear()} Support360. Все права защищены.
               </p>
               <p className="text-gray-500 text-sm mt-1">
-                Превращаем хаос заявок в простой диалог с 2023 года
+                Превращаем хаос заявок в простой диалог с 2024 года
               </p>
             </div>
             

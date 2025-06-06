@@ -69,11 +69,11 @@ const Header: React.FC = () => {
         </button>
         
         <nav className="hidden md:flex items-center space-x-6">
-          <a href="#how-it-works" className={`text-sm font-medium hover:text-primary transition-colors ${isScrolled ? 'text-gray-800' : 'text-white'}`}>
-            Наша история
-          </a>
           <a href="#features" className={`text-sm font-medium hover:text-primary transition-colors ${isScrolled ? 'text-gray-800' : 'text-white'}`}>
             Возможности
+          </a>
+          <a href="#how-it-works" className={`text-sm font-medium hover:text-primary transition-colors ${isScrolled ? 'text-gray-800' : 'text-white'}`}>
+            Наша история
           </a>
           <a href="#use-cases" className={`text-sm font-medium hover:text-primary transition-colors ${isScrolled ? 'text-gray-800' : 'text-white'}`}>
             Кейсы

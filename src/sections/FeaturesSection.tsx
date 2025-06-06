@@ -19,7 +19,7 @@ const FeaturesSection: React.FC = () => {
     <section id="features" className="py-20">
       <div className="container mx-auto px-4">
         <SectionTitle 
-          title="Почему Support360 выбирают тысячи компаний"
+          title="Почему выбирают Support360"
           subtitle="Мы убрали всё лишнее — оставили только главное: диалог, автоматизацию внутри, простоту снаружи"
           center
         />

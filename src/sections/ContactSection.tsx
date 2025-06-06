@@ -211,7 +211,7 @@ const ContactSection: React.FC = () => {
 
                 <div className="pt-4">
                   <p className="font-semibold text-gray-700 mb-3">Режим работы:</p>
-                  <p className="text-gray-600">Пн-Пт: 9:00 - 18:00 (МСК)</p>
+                  <p className="text-gray-600">Пн-Пт: 9:00 - 18:00 (НСК)</p>
                   <p className="text-gray-600">Сб-Вс: Выходные</p>
                 </div>
                 
