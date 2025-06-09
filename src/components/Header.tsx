@@ -25,6 +25,10 @@ const Header: React.FC = () => {
     }
   };
 
+  const openLogin = () => {
+    window.open('https://support360.ru/login', '_blank');
+  };
+
   const refreshPage = () => {
     window.location.reload();
     window.scrollTo(0, 0);
@@ -87,20 +91,21 @@ const Header: React.FC = () => {
         </nav>
         
         <div className="hidden md:flex items-center space-x-3">
-          <a href="https://t.me/dev_support360_bot" target="_blank" rel="noopener noreferrer">
-            <Button className={`text-sm px-4 py-2 ${isScrolled 
+          <Button 
+            onClick={openLogin}
+            className={`text-sm px-4 py-2 ${isScrolled 
               ? '!bg-transparent !text-primary border-2 border-primary hover:!bg-primary/10' 
-              : '!bg-white/10 !text-white border-2 border-white/30 hover:!bg-white/20 backdrop-blur-sm'}`}>
-              Демо
-            </Button>
-          </a>
+              : '!bg-white/10 !text-white border-2 border-white/30 hover:!bg-white/20 backdrop-blur-sm'}`}
+          >
+            Вход/Регистрация
+          </Button>
           <Button 
             onClick={scrollToContact}
             className={`text-sm px-4 py-2 ${isScrolled 
               ? '!bg-primary !text-white hover:!bg-primary-dark' 
               : '!bg-primary !text-white hover:!bg-primary-dark'}`}
           >
-            Запустить за 15 минут
+            Задать вопрос
           </Button>
         </div>
         
@@ -184,13 +189,11 @@ const Header: React.FC = () => {
             </a>
             
             <div className="pt-4 space-y-3">
-              <a href="https://t.me/dev_support360_bot" target="_blank" rel="noopener noreferrer">
-                <Button className="!bg-transparent !text-primary border-2 border-primary hover:!bg-primary/10 w-full">
-                  Попробовать демо
-                </Button>
-              </a>
+              <Button onClick={openLogin} className="!bg-transparent !text-primary border-2 border-primary hover:!bg-primary/10 w-full">
+                Вход/Регистрация
+              </Button>
               <Button onClick={scrollToContact} className="w-full">
-                Запустить за 15 минут
+                Задать вопрос
               </Button>
             </div>
           </div>
