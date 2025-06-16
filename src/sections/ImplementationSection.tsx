@@ -52,7 +52,10 @@ const ImplementationSection: React.FC = () => {
             </div>
           </div>
 
-          <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
+          <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 relative">
+            <div className="absolute top-4 right-4 bg-orange-100 text-orange-600 px-3 py-1 rounded-full text-xs font-semibold">
+              Скоро
+            </div>
             <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
               <BarChart3 className="w-6 h-6 text-primary" />
             </div>
@@ -65,7 +68,10 @@ const ImplementationSection: React.FC = () => {
             </div>
           </div>
 
-          <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
+          <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 relative">
+            <div className="absolute top-4 right-4 bg-orange-100 text-orange-600 px-3 py-1 rounded-full text-xs font-semibold">
+              В разработке
+            </div>
             <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
               <TrendingUp className="w-6 h-6 text-primary" />
             </div>
@@ -78,7 +84,10 @@ const ImplementationSection: React.FC = () => {
             </div>
           </div>
 
-          <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
+          <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 relative">
+            <div className="absolute top-4 right-4 bg-orange-100 text-orange-600 px-3 py-1 rounded-full text-xs font-semibold">
+              Скоро
+            </div>
             <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
               <Settings className="w-6 h-6 text-primary" />
             </div>
