@@ -75,7 +75,7 @@ const ContactSection: React.FC = () => {
       <div className="container mx-auto px-4">
         <SectionTitle 
           title="Хватит терять клиентов из-за плохой поддержки"
-          subtitle="Запустите Support360 уже завтра и увидите разницу. Первые результаты — в первый же день работы."
+          subtitle="Запустите Support360 уже сегодня."
           center
           light
         />
@@ -216,9 +216,9 @@ const ContactSection: React.FC = () => {
                 </div>
                 
                 <div className="bg-primary/10 rounded-lg p-4">
-                  <p className="font-semibold text-primary mb-2">Экстренная связь</p>
+                  <p className="font-semibold text-primary mb-2">Постоянная связь</p>
                   <p className="text-sm text-gray-700">
-                    Для действующих клиентов доступна круглосуточная поддержка через Support360
+                    Для действующих клиентов доступна поддержка через Support360
                   </p>
                 </div>
               </div>
