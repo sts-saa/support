@@ -29,11 +29,11 @@ const Footer: React.FC = () => {
               </div>
               <div>
                 <span className="font-bold text-2xl">Support360</span>
-                <p className="text-gray-400 text-sm">Сервис-деск нового поколения</p>
+                <p className="text-gray-400 text-sm">Служба поддержки нового поколения</p>
               </div>
             </div>
             <p className="text-gray-400 mb-6 max-w-md">
-              Превращаем хаос заявок в простой диалог. Никаких форм и статусов — только понятное общение, как в мессенджере.
+              Превращаем хаос заявок в простой диалог.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 mb-6">
@@ -43,7 +43,7 @@ const Footer: React.FC = () => {
               </div>
               <div className="flex items-center text-light">
                 <Clock className="w-5 h-5 mr-2" />
-                <span className="font-semibold">Без внедрения и обучения</span>
+                <span className="font-semibold">Внедрение без IT-отдела</span>
               </div>
             </div>
             
@@ -112,7 +112,6 @@ const Footer: React.FC = () => {
                   <a href="mailto:info@support360.ru" className="text-white hover:text-primary transition-colors">
                     info@support360.ru
                   </a>
-                  <p className="text-gray-400 text-sm">Ответим в течение часа</p>
                 </div>
               </li>
               
@@ -160,7 +159,7 @@ const Footer: React.FC = () => {
                 🚀 Хватит терять клиентов из-за плохой поддержки
               </p>
               <p className="text-gray-300 text-sm">
-                Запустите Support360 завтра и увидите разницу в первый же день
+                Запустите Support360 уже сегодня
               </p>
             </div>
           </div>
