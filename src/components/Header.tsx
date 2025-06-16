@@ -66,9 +66,6 @@ const Header: React.FC = () => {
             <span className={`font-bold text-xl ${isScrolled ? 'text-primary' : 'text-white'}`}>
               Support360
             </span>
-            <span className={`text-xs ${isScrolled ? 'text-gray-600' : 'text-gray-200'}`}>
-              Сервис-деск нового поколения
-            </span>
           </div>
         </button>
         
