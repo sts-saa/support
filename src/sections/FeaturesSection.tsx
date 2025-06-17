@@ -20,14 +20,14 @@ const FeaturesSection: React.FC = () => {
       <div className="container mx-auto px-4">
         <SectionTitle 
           title="Почему выбирают Support360"
-          subtitle="Мы убрали всё лишнее — оставили только главное: диалог, автоматизацию внутри, простоту снаружи"
+          subtitle="Ничего лишнего — только главное: диалог, автоматизацию внутри, простоту снаружи"
           center
         />
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 ml-10 mr-10">
           <FeatureCard 
             icon={<MessageSquareIcon />}
-            title="Как мессенджер, но с умом"
+            title="Общение как в мессенджере"
             description="Клиенты пишут как в WhatsApp, а система автоматически превращает это в тикет с нужным приоритетом и исполнителем."
           />
           
