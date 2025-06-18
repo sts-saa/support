@@ -18,20 +18,20 @@ const FeaturesSection: React.FC = () => {
       <div className="container mx-auto px-4">
         <SectionTitle 
           title="Почему выбирают Support360"
-          subtitle="Всё как в обычном чате — просто, быстро, понятно"
+          subtitle="Просто, быстро, понятно"
           center
         />
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 ml-10 mr-10">
           <FeatureCard 
             icon={<MessageSquareIcon />}
-            title="Всё как в обычном чате"
-            description="Клиенты пишут как в WhatsApp, а система сама превращает это в заявку и передаёт нужному сотруднику."
+            title="Формат чата"
+            description="Клиенты пишут в чат, а система сама превращает это в заявку и передаёт нужному сотруднику."
           />
           
           <FeatureCard 
             icon={<ZapIcon />}
-            title="Можно начать за 15 минут"
+            title="Запуск за 15 минут"
             description="Никаких месяцев настроек и обучения. Просто включили — и уже принимаете обращения."
           />
           

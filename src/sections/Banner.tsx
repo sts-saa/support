@@ -60,12 +60,13 @@ const Banner: React.FC = () => {
         <div className="flex flex-col lg:flex-row items-center justify-center w-full max-w-7xl">
           <div className="md:w-1/2 mb-10 md:mb-0 text-center md:text-left">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 tracking-tight">
-              Поддержка начинается с первого сообщения
+              Техподдержка в формате мессенджера
             </h1>
-            <p className="text-xl text-gray-200 mb-8 max-w-lg mx-auto md:mx-0">
+            <p className="text-xl text-gray-200 max-w-lg mx-auto md:mx-0">
               Support360 — современная поддержка для бизнеса.
-              Общение так же просто, как в чате.
-              Без сложных форм и ожидания.
+            </p>
+            <p className="text-xl text-gray-200 mb-8 max-w-lg mx-auto md:mx-0">
+              Простое общение в чате без сложных форм и ожидания.
             </p>
             
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center md:justify-start relative">
@@ -98,7 +99,7 @@ const Banner: React.FC = () => {
                   <CheckCircle2 className="w-6 h-6 text-green-500 mr-2" />
                   <div>
                     <p className="font-semibold text-gray-800">Запуск за 15 минут</p>
-                    <p className="text-sm text-gray-600">Без обучения и настроек</p>
+                    <p className="text-sm text-gray-600">Внедрение без IT-отдела</p>
                   </div>
                 </div>
               </div>
