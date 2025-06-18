@@ -74,13 +74,13 @@ const Header: React.FC = () => {
             Возможности
           </a>
           <a href="#how-it-works" className={`text-sm font-medium hover:text-primary transition-colors ${isScrolled ? 'text-gray-800' : 'text-white'}`}>
-            Наша история
+            История создания
           </a>
           <a href="#use-cases" className={`text-sm font-medium hover:text-primary transition-colors ${isScrolled ? 'text-gray-800' : 'text-white'}`}>
             Кейсы
           </a>
           <a href="#implementation" className={`text-sm font-medium hover:text-primary transition-colors ${isScrolled ? 'text-gray-800' : 'text-white'}`}>
-            ИИ-модули
+            Умный помощник
           </a>
           <a href="#faq" className={`text-sm font-medium hover:text-primary transition-colors ${isScrolled ? 'text-gray-800' : 'text-white'}`}>
             Вопросы
@@ -102,7 +102,7 @@ const Header: React.FC = () => {
               ? '!bg-primary !text-white hover:!bg-primary-dark' 
               : '!bg-primary !text-white hover:!bg-primary-dark'}`}
           >
-            Задать вопрос
+            Оставить заявку
           </Button>
         </div>
         
@@ -154,7 +154,7 @@ const Header: React.FC = () => {
               className="font-medium py-2 hover:text-primary border-b border-gray-100"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Наша история
+              История создания
             </a>
             <a 
               href="#features" 
@@ -175,7 +175,7 @@ const Header: React.FC = () => {
               className="font-medium py-2 hover:text-primary border-b border-gray-100"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              ИИ-модули
+              Умный помощник
             </a>
             <a 
               href="#faq" 
@@ -190,7 +190,7 @@ const Header: React.FC = () => {
                 Вход/Регистрация
               </Button>
               <Button onClick={scrollToContact} className="w-full">
-                Задать вопрос
+                Оставить заявку
               </Button>
             </div>
           </div>

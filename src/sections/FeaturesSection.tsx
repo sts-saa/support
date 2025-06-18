@@ -3,11 +3,9 @@ import SectionTitle from '../components/SectionTitle';
 import FeatureCard from '../components/FeatureCard';
 import { 
   MessageSquareIcon,
-  PieChartIcon,
   SmartphoneIcon,
   ZapIcon,
   ClockIcon,
-  SettingsIcon,
   QrCodeIcon,
   MessageCircle,
   Bell,
@@ -20,69 +18,57 @@ const FeaturesSection: React.FC = () => {
       <div className="container mx-auto px-4">
         <SectionTitle 
           title="Почему выбирают Support360"
-          subtitle="Ничего лишнего — только главное: диалог, автоматизацию внутри, простоту снаружи"
+          subtitle="Всё как в обычном чате — просто, быстро, понятно"
           center
         />
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 ml-10 mr-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 ml-10 mr-10">
           <FeatureCard 
             icon={<MessageSquareIcon />}
-            title="Общение как в мессенджере"
-            description="Клиенты пишут как в WhatsApp, а система автоматически превращает это в тикет с нужным приоритетом и исполнителем."
+            title="Всё как в обычном чате"
+            description="Клиенты пишут как в WhatsApp, а система сама превращает это в заявку и передаёт нужному сотруднику."
           />
           
           <FeatureCard 
             icon={<ZapIcon />}
-            title="Мгновенный старт"
-            description="15 минут — и вы уже принимаете заявки. Никаких месяцев внедрения, обучений и настроек."
+            title="Можно начать за 15 минут"
+            description="Никаких месяцев настроек и обучения. Просто включили — и уже принимаете обращения."
           />
           
           <FeatureCard 
             icon={<QrCodeIcon />}
             title="Вход без регистрации"
-            description="QR-код или Telegram — клиент сразу попадает в нужный чат. Никаких форм и паролей."
+            description="Клиент сканирует код или переходит по ссылке — и сразу попадает в чат. Никаких паролей."
           />
           
           <FeatureCard 
             icon={<Layers />}
-            title="Единая база всех обращений"
-            description="Конец потерянным сообщениям в разных чатах. Всё в одном месте с полной историей."
+            title="Все обращения в одном месте"
+            description="Конец потерянным сообщениям в разных чатах. Всё собрано в одном месте с полной историей."
           />
           
           <FeatureCard 
             icon={<SmartphoneIcon />}
-            title="Работает везде"
-            description="Браузер, телефон, планшет — доступ к системе с любого устройства без установки приложений."
+            title="Работает на любом устройстве"
+            description="Телефон, планшет, компьютер — доступ к системе с любого устройства без установки программ."
           />
           
           <FeatureCard 
             icon={<Bell />}
-            title="Умные уведомления"
-            description="Система сама напомнит о просроченных заявках и оповестит клиентов о важных событиях."
+            title="Умные напоминания"
+            description="Система сама напомнит о важных заявках и сообщит клиентам о решении проблемы."
           />
           
           <FeatureCard 
             icon={<MessageCircle />}
-            title="Интеграция с Telegram"
+            title="Работает с Telegram"
             description="Принимайте заявки прямо в Telegram — там, где ваши клиенты уже общаются."
           />
           
           <FeatureCard 
             icon={<ClockIcon />}
-            title="Контроль качества"
-            description="Автоматический мониторинг времени реакции и решения. SLA под контролем без лишних усилий."
-          />
-
-          <FeatureCard 
-            icon={<PieChartIcon />}
-            title="Аналитика в реальном времени"
-            description="Видите узкие места, пиковые нагрузки и эффективность команды. Данные для принятия решений."
-          />
-
-          <FeatureCard 
-            icon={<SettingsIcon />}
-            title="Настройка без программиста"
-            description="Просто скажите системе: 'Если пишут про лифт — отправляй ЖЭКу'. ИИ сам настроит правило."
+            title="Контроль скорости ответа"
+            description="Видите, как быстро отвечает команда. Никто не останется без внимания."
           />
         </div>
         
@@ -92,7 +78,7 @@ const FeaturesSection: React.FC = () => {
               Результат: ваша поддержка работает как часы
             </h3>
             <p className="text-lg text-gray-600 mb-6">
-              Клиенты довольны быстрыми ответами, операторы не тонут в хаосе, а вы видите полную картину работы службы поддержки.
+              Клиенты довольны быстрыми ответами, сотрудники не тонут в хаосе, а вы видите полную картину работы.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
               <div>

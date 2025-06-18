@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
 
 const statistics = [
-  { value: 75, label: 'Быстрее обработка заявок', symbol: '%' },
-  { value: 90, label: 'Клиентов довольны скоростью', symbol: '%' },
-  { value: 60, label: 'Меньше рутины у операторов', symbol: '%' },
-  { label: 'Время до запуска', text: '15 мин' }
+  { value: 75, label: 'быстрее обработка обращений', symbol: '%' },
+  { value: 90, label: 'клиентов довольны поддержкой', symbol: '%' },
+  { value: 60, label: 'меньше рутины для команды', symbol: '%' },
+  { label: 'время до запуска', text: '15 мин' }
 ];
 
 const StatisticsSection: React.FC = () => {
@@ -41,7 +41,7 @@ const StatisticsSection: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Результаты, которые видят наши клиенты
+            Результаты наших клиентов
           </h2>
           <p className="text-xl text-gray-200">
             Реальные цифры от компаний, которые уже используют Support360
@@ -53,7 +53,7 @@ const StatisticsSection: React.FC = () => {
             <div key={index} className="text-center flex flex-col items-center justify-center">
               {stat.value ? (
                 <div className="relative inline-block w-32 h-32">
-                  <svg className="w-full h-full\" viewBox="0 0 100 100">
+                  <svg className="w-full h-full" viewBox="0 0 100 100">
                     <circle 
                       cx="50" 
                       cy="50" 
