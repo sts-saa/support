@@ -62,10 +62,8 @@ const Banner: React.FC = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 tracking-tight">
               Техподдержка в формате мессенджера
             </h1>
-            <p className="text-xl text-gray-200 max-w-lg mx-auto md:mx-0">
-              Support360 — современная поддержка для бизнеса.
-            </p>
             <p className="text-xl text-gray-200 mb-8 max-w-lg mx-auto md:mx-0">
+              Support360 — современная поддержка для бизнеса. <br></br>
               Простое общение в чате без сложных форм и ожидания.
             </p>
             
