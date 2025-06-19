@@ -7,8 +7,8 @@ const ImplementationSection: React.FC = () => {
     <section id="implementation" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <SectionTitle 
-          title="Поддержка, которая помогает и понимает"
-          subtitle="Умный помощник работает в фоне, не усложняя систему, а делая поддержку быстрее и качественнее"
+          title="Умный помощник для каждого"
+          subtitle="Поддержка с искусственным интеллектом"
           center
         />
         
@@ -17,12 +17,12 @@ const ImplementationSection: React.FC = () => {
             <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
               <Brain className="w-6 h-6 text-primary" />
             </div>
-            <h3 className="text-xl font-bold mb-3 text-gray-800">Система сама передаёт нужному специалисту</h3>
+            <h3 className="text-xl font-bold mb-3 text-gray-800">Автоматическое распределение заявок</h3>
             <p className="text-gray-600 mb-4">
-              Анализирует сообщение и автоматически определяет тип запроса, срочность и нужного исполнителя.
+              Анализирует сообщение и определяет тип запроса, срочность и нужного исполнителя.
             </p>
             <div className="bg-gray-50 p-3 rounded text-sm text-gray-700">
-              <strong>Результат:</strong> Сотруднику не нужно разбираться — сразу понятно, кто берёт в работу
+              <strong>Результат:</strong> Сотруднику не нужно разбирать заявки вручную
             </div>
           </div>
 
@@ -32,20 +32,36 @@ const ImplementationSection: React.FC = () => {
             </div>
             <h3 className="text-xl font-bold mb-3 text-gray-800">Быстрые ответы на частые вопросы</h3>
             <p className="text-gray-600 mb-4">
-              При поступлении заявки система проверяет базу знаний и предлагает готовый ответ сотруднику или клиенту.
+              Проверяет прошлые запросы и предлагает готовый ответ оператору или клиенту.
             </p>
             <div className="bg-gray-50 p-3 rounded text-sm text-gray-700">
-              <strong>Результат:</strong> 60% запросов решаются мгновенно без участия сотрудника
+              <strong>Результат:</strong> Мгновенное решение повторяющихся запросов
             </div>
           </div>
 
           <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
             <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+              <BarChart3 className="w-6 h-6 text-primary" />
+            </div>
+            <h3 className="text-xl font-bold mb-3 text-gray-800">Сводка по каждому диалогу</h3>
+            <p className="text-gray-600 mb-4">
+               Автоматически анализирует диалог и формирует краткое резюме
+            </p>
+            <div className="bg-gray-50 p-3 rounded text-sm text-gray-700">
+              <strong>Результат:</strong> 
+            </div>
+          </div>
+
+          <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 relative">
+            <div className="absolute top-4 right-4 bg-orange-100 text-orange-600 px-3 py-1 rounded-full text-xs font-semibold">
+              Скоро
+            </div>
+            <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
               <MessageSquare className="w-6 h-6 text-primary" />
             </div>
             <h3 className="text-xl font-bold mb-3 text-gray-800">Подсказки для сотрудников</h3>
             <p className="text-gray-600 mb-4">
-              Генерирует персональный ответ на основе контекста: тип клиента, история обращений, как отвечать лучше.
+            Генерирует персональный ответ на основе контекста: тип клиента, история обращений, как отвечать лучше.
             </p>
             <div className="bg-gray-50 p-3 rounded text-sm text-gray-700">
               <strong>Результат:</strong> Никаких шаблонных фраз — каждый ответ индивидуален
@@ -55,22 +71,6 @@ const ImplementationSection: React.FC = () => {
           <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 relative">
             <div className="absolute top-4 right-4 bg-orange-100 text-orange-600 px-3 py-1 rounded-full text-xs font-semibold">
               Скоро
-            </div>
-            <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-              <BarChart3 className="w-6 h-6 text-primary" />
-            </div>
-            <h3 className="text-xl font-bold mb-3 text-gray-800">Вся история общения сохраняется</h3>
-            <p className="text-gray-600 mb-4">
-              Отслеживает вежливость, полноту ответов и даёт рекомендации по улучшению сервиса.
-            </p>
-            <div className="bg-gray-50 p-3 rounded text-sm text-gray-700">
-              <strong>Результат:</strong> Постоянное повышение качества без дополнительного контроля
-            </div>
-          </div>
-
-          <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 relative">
-            <div className="absolute top-4 right-4 bg-orange-100 text-orange-600 px-3 py-1 rounded-full text-xs font-semibold">
-              В разработке
             </div>
             <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
               <TrendingUp className="w-6 h-6 text-primary" />
@@ -91,7 +91,7 @@ const ImplementationSection: React.FC = () => {
             <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
               <Settings className="w-6 h-6 text-primary" />
             </div>
-            <h3 className="text-xl font-bold mb-3 text-gray-800">Настроить можно простыми словами</h3>
+            <h3 className="text-xl font-bold mb-3 text-gray-800">Простая настройка</h3>
             <p className="text-gray-600 mb-4">
               Просто скажите: "Если пишут про лифт — отправляй в ЖЭК". Система сама настроит правило.
             </p>
@@ -105,10 +105,10 @@ const ImplementationSection: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
               <h3 className="text-2xl font-bold text-gray-800 mb-4">
-                Руководитель видит советы, как сделать поддержку ещё лучше
+               Умный ассистент руководителя
               </h3>
               <p className="text-gray-600 mb-6">
-                Скоро: умная аналитика будет давать комплексные рекомендации по улучшению работы службы поддержки — 
+                Система будет анализировать и давать комплексные рекомендации по улучшению работы службы поддержки — 
                 как личный консультант, который видит всю картину и подсказывает, что можно сделать лучше.
               </p>
               <ul className="space-y-3">
@@ -135,7 +135,7 @@ const ImplementationSection: React.FC = () => {
             <div className="relative">
               <img 
                 src="devices.png" 
-                alt="Support360 с умным помощником на разных устройствах" 
+                alt="Support360 на разных устройствах" 
                 className="w-auto h-auto mx-auto"
               />
             </div>
