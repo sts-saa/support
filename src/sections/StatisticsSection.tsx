@@ -4,7 +4,7 @@ const statistics = [
   { value: 75, label: 'быстрее обработка обращений', symbol: '%' },
   { value: 90, label: 'клиентов довольны поддержкой', symbol: '%' },
   { value: 60, label: 'меньше рутины для команды', symbol: '%' },
-  { label: 'время до запуска', text: '15 мин' }
+  { label: 'время запуска', text: '15 мин' }
 ];
 
 const StatisticsSection: React.FC = () => {
@@ -41,10 +41,10 @@ const StatisticsSection: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Результаты наших клиентов
+          Результат: ваша поддержка работает как часы
           </h2>
           <p className="text-xl text-gray-200">
-            Реальные цифры от компаний, которые уже используют Support360
+          Клиенты довольны быстрыми ответами, сотрудники не тонут в хаосе, а вы видите полную картину работы.
           </p>
         </div>
         
@@ -101,7 +101,7 @@ const StatisticsSection: React.FC = () => {
               Перестаньте терять клиентов из-за плохой поддержки
             </h3>
             <p className="text-lg text-gray-200 mb-6">
-              Каждая потерянная заявка — это потерянный клиент и репутация.
+              Каждая потерянная заявка — это потерянный клиент и репутация. <br></br>
               Support360 гарантирует, что ни одно обращение не останется без ответа.
             </p>
           </div>
