@@ -4,7 +4,7 @@ import { Brain, Zap, BarChart3, MessageSquare, Settings, TrendingUp } from 'luci
 
 const AI_Section: React.FC = () => {
   return (
-    <section id="ai-section" className="py-20 bg-gray-50 relative">
+    <section id="ai-section" className="py-20 relative">
       <div className="container mx-auto px-4">
         <SectionTitle 
           title="Скроро: Умный помощник для каждого"
@@ -17,7 +17,7 @@ const AI_Section: React.FC = () => {
             <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
               <Brain className="w-6 h-6 text-primary" />
             </div>
-            <h3 className="text-xl font-bold mb-3 text-gray-800">Система сама передаёт обращение нужному специалисту</h3>
+            <h3 className="text-xl font-bold mb-3 text-gray-800">Автоматическое распределение заявок</h3>
             <p className="text-gray-600 mb-4">
               Анализирует сообщение и определяет тип запроса, срочность и нужного исполнителя.
             </p>
@@ -56,9 +56,9 @@ const AI_Section: React.FC = () => {
             <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
               <BarChart3 className="w-6 h-6 text-primary" />
             </div>
-            <h3 className="text-xl font-bold mb-3 text-gray-800">Вся история общения сохраняется</h3>
+            <h3 className="text-xl font-bold mb-3 text-gray-800">Сводка по каждому диалогу</h3>
             <p className="text-gray-600 mb-4">
-               Автоматически анализирует диалог и формирует краткое резюме
+               Автоматически анализирует диалог и формирует краткое резюме.
             </p>
             <div className="bg-gray-50 p-3 rounded text-sm text-gray-700">
               <strong>Результат:</strong> Мгновенно понимание проблемы без необходимости читать всю переписку.
@@ -69,7 +69,7 @@ const AI_Section: React.FC = () => {
             <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
               <MessageSquare className="w-6 h-6 text-primary" />
             </div>
-            <h3 className="text-xl font-bold mb-3 text-gray-800">Подсказки для сотрудников, как отвечать лучше</h3>
+            <h3 className="text-xl font-bold mb-3 text-gray-800">Подсказки для сотрудников</h3>
             <p className="text-gray-600 mb-4">
             Генерирует персональный ответ на основе контекста: тип клиента, история обращений, как отвечать лучше.
             </p>
@@ -82,7 +82,7 @@ const AI_Section: React.FC = () => {
             <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
               <TrendingUp className="w-6 h-6 text-primary" />
             </div>
-            <h3 className="text-xl font-bold mb-3 text-gray-800">Прогноз нагрузки — никто не останется без ответа</h3>
+            <h3 className="text-xl font-bold mb-3 text-gray-800">Прогноз нагрузки</h3>
             <p className="text-gray-600 mb-4">
               Анализирует пиковые периоды и заранее прогнозирует всплески обращений.
             </p>

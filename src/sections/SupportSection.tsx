@@ -3,7 +3,7 @@ import SectionTitle from '../components/SectionTitle';
 
 const SupportSection: React.FC = () => {
   return (
-    <section id="support" className="py-20">
+    <section id="support" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <SectionTitle 
           title="Внедрение и поддержка"

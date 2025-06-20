@@ -6,7 +6,7 @@ const ServiceHistorySection: React.FC = () => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <section id="service-history" className="py-20">
+    <section id="service-history" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <SectionTitle 
           title="История создания Support360"
