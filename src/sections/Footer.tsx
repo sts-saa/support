@@ -36,7 +36,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-gray-900 text-white py-16">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 ml-10 mr-10">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
           <div className="md:col-span-2">
             <div className="flex items-center mb-6">
               <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center mr-3">
@@ -74,7 +74,7 @@ const Footer: React.FC = () => {
               </div>
               <div className="flex items-center text-light">
                 <Clock className="w-5 h-5 mr-2" />
-                <span className="font-semibold">Без обучения</span>
+                <span className="font-semibold">Без месяцев обучения</span>
               </div>
             </div>
             
@@ -95,7 +95,7 @@ const Footer: React.FC = () => {
               </button>
             </div>
           </div>
-          
+
           <div>
             <h3 className="text-lg font-semibold mb-6">Решение</h3>
             <ul className="space-y-3">
@@ -107,9 +107,11 @@ const Footer: React.FC = () => {
               <li><button onClick={() => scrollToSection('ai-section')} className="text-gray-400 hover:text-white transition-colors text-left">Умный помощник</button></li>
               <li><button onClick={() => scrollToSection('faq')} className="text-gray-400 hover:text-white transition-colors text-left">Частые вопросы</button></li>
             </ul>
-            
-            <h3 className="text-lg font-semibold mb-4 mt-8">Сферы применения</h3>
-            <ul className="space-y-2 text-sm">
+          </div>
+          
+          <div>
+            <h3 className="text-lg font-semibold mb-6">Сферы применения</h3>
+            <ul className="space-y-3">
               <li><button onClick={() => scrollToUseCaseAndSelect(0)} className="text-gray-400 hover:text-white transition-colors text-left">IT-поддержка</button></li>
               <li><button onClick={() => scrollToUseCaseAndSelect(1)} className="text-gray-400 hover:text-white transition-colors text-left">Мероприятия и конференции</button></li>
               <li><button onClick={() => scrollToUseCaseAndSelect(2)} className="text-gray-400 hover:text-white transition-colors text-left">Гостиницы и отели</button></li>

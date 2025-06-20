@@ -4,17 +4,20 @@ interface UseCaseCardProps {
   icon: ReactNode;
   title: string;
   description: string;
-  compact?: boolean; 
 }
 
 const UseCaseCard: React.FC<UseCaseCardProps> = ({ icon, title, description }) => {
   return (
-    <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 h-full flex flex-col">
-      <div className="text-primary mb-4">
+    <div className="bg-white p-4 md:p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 h-full flex flex-col">
+      <div className="text-primary mb-4 flex justify-center">
         {icon}
       </div>
-      <h3 className="text-xl font-bold mb-2 text-gray-800">{title}</h3>
-      <p className="text-gray-600 flex-grow">{description}</p>
+      <h3 className="text-lg md:text-xl font-bold mb-3 text-gray-800 text-center min-h-[3rem] flex items-center justify-center">
+        {title}
+      </h3>
+      <p className="text-gray-600 text-sm md:text-base text-center flex-grow">
+        {description}
+      </p>
     </div>
   );
 };
