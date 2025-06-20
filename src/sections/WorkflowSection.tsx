@@ -4,7 +4,7 @@ import ChatDemo from '../components/ChatDemo';
 
 const WorkflowSection: React.FC = () => {
   return (
-    <section id="workflow" className="py-20">
+    <section id="workflow" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <SectionTitle 
           title="Как это работает"

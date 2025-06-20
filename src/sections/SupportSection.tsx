@@ -18,14 +18,14 @@ const SupportSection: React.FC = () => {
                 <span className="text-2xl font-bold text-primary">1</span>
               </div>
               <h4 className="font-semibold text-gray-800 mb-2">Быстрый запуск</h4>
-              <p className="text-gray-600 text-sm">Подключаем домен, настраиваем коды и подключения</p>
+              <p className="text-gray-600 text-sm">Настраиваем систему и регистрируем пользователей</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-primary">2</span>
               </div>
-              <h4 className="font-semibold text-gray-800 mb-2">Поможем настроить под ваши задачи</h4>
-              <p className="text-gray-600 text-sm">Показываем, как работать с системой эффективно</p>
+              <h4 className="font-semibold text-gray-800 mb-2">Предоставляем инструкции</h4>
+              <p className="text-gray-600 text-sm">Готовая документация и видеоинструкции</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">

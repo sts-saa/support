@@ -22,11 +22,11 @@ function App() {
     <div className="font-sans">
       <Header />
       <Banner />
+      <UseCasesSection />
       <FeaturesSection />
+      <WorkflowSection />
       <StatisticsSection />
       <HowItWorksSection />
-      <WorkflowSection />
-      <UseCasesSection />
       <ImplementationSection />
       <SupportSection />
       <FAQSection />

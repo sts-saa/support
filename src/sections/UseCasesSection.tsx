@@ -114,8 +114,8 @@ const UseCasesSection: React.FC = () => {
   };
 
   return (
-    <section id="use-cases" className="py-20 px-4 sm:ml-10 sm:mr-10">
-      <div className="container mx-auto">
+    <section id="use-cases" className="py-20 bg-gray-50">
+      <div className="container mx-auto px-4">
         <SectionTitle 
           title="Support360 подходит всем, кому важна скорость и простота"
           subtitle="Особенно эффективно там, где нужна мобильность и быстрые решения"
@@ -233,31 +233,6 @@ const UseCasesSection: React.FC = () => {
             </div>
           </div>
         )}
-        
-        <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-red-50 to-orange-50 border border-red-200 rounded-xl p-8 max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold text-gray-800 mb-4">
-              Сколько клиентов вы теряете из-за неудобной поддержки?
-            </h3>
-            <p className="text-lg text-gray-600 mb-6">
-              Каждый потерянный клиент — это не только упущенная прибыль сегодня, но и плохие отзывы, которые отпугнут новых клиентов завтра.
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-              <div className="bg-white rounded-lg p-4">
-                <div className="text-2xl font-bold text-red-500 mb-2">67%</div>
-                <div className="text-gray-600">клиентов уходят из-за плохого сервиса</div>
-              </div>
-              <div className="bg-white rounded-lg p-4">
-                <div className="text-2xl font-bold text-red-500 mb-2">5x</div>
-                <div className="text-gray-600">дороже привлечь нового клиента</div>
-              </div>
-              <div className="bg-white rounded-lg p-4">
-                <div className="text-2xl font-bold text-red-500 mb-2">-12%</div>
-                <div className="text-gray-600">падение прибыли от плохих отзывов</div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
