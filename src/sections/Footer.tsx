@@ -161,12 +161,6 @@ const Footer: React.FC = () => {
               >
                 Политика конфиденциальности
               </button>
-              <button 
-                onClick={scrollToContact}
-                className="text-gray-400 hover:text-white transition-colors"
-              >
-                Пользовательское соглашение
-              </button>
             </div>
           </div>
           
