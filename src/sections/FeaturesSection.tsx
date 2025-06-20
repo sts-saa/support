@@ -31,7 +31,7 @@ const FeaturesSection: React.FC = () => {
           
           <FeatureCard 
             icon={<ZapIcon />}
-            title="Запуск за 15 минут"
+            title="Запуск за 1 день"
             description="Никаких месяцев настроек и обучения. Просто включили — и уже принимаете обращения."
           />
           
