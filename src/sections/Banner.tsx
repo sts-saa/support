@@ -85,13 +85,13 @@ const Banner: React.FC = () => {
             </div>
           </div>
 
-          {/* Картинка справа снизу */}
-          <div className="lg:w-1/2 relative">
-            <div className="absolute bottom-0 right-0 w-full max-w-2xl parallax-element" data-speed="-15">
+          {/* Картинка в правом нижнем углу */}
+          <div className="lg:w-1/2 relative h-full">
+            <div className="absolute bottom-0 right-0 w-full max-w-lg parallax-element" data-speed="-15">
               <img 
                 src="mockup.png" 
                 alt="Support360 Dashboard" 
-                className="w-full h-auto object-contain"
+                className="w-full h-auto object-contain ml-auto block"
               />
               
               <div className="absolute -bottom-8 -left-8 bg-white p-4 rounded-lg shadow-lg max-w-xs animate-bounce-slow parallax-element" data-speed="-10">
