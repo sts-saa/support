@@ -1,6 +1,5 @@
 import React from 'react';
 import SectionTitle from '../components/SectionTitle';
-import ChatDemo from '../components/ChatDemo';
 
 const HowItWorksSection: React.FC = () => {
   return (
