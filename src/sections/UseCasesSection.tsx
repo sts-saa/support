@@ -117,7 +117,7 @@ const UseCasesSection: React.FC = () => {
   };
 
   return (
-    <section id="use-cases" className="py-16 md:py-20 bg-gray-50">
+    <section id="use-cases" className="py-16 md:py-20">
       <div className="container mx-auto px-4">
         <SectionTitle 
           title="Кому нужен Support360 — и почему"
@@ -135,10 +135,10 @@ const UseCasesSection: React.FC = () => {
               <div
                 data-use-case-card
                 onClick={() => handleCardClick(index)}
-                className={`cursor-pointer rounded-lg overflow-hidden transition-all h-full ${
+                className={`cursor-pointer rounded-xl transition-all duration-300 h-full transform hover:-translate-y-1 ${
                   selectedCase.title === useCase.title 
-                    ? 'ring-2 ring-primary shadow-md' 
-                    : 'hover:shadow-md'
+                    ? 'ring-2 ring-primary' 
+                    : ''
                 }`}
               >
                 <UseCaseCard

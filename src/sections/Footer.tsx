@@ -99,7 +99,7 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-lg font-semibold mb-6">Решение</h3>
             <ul className="space-y-3">
-              <li><button onClick={() => scrollToSection('use-cases')} className="text-gray-400 hover:text-white transition-colors text-left">Кейсы применения</button></li>
+              <li><button onClick={() => scrollToSection('use-cases')} className="text-gray-400 hover:text-white transition-colors text-left">Применение</button></li>
               <li><button onClick={() => scrollToSection('features')} className="text-gray-400 hover:text-white transition-colors text-left">Возможности</button></li>
               <li><button onClick={() => scrollToSection('workflow')} className="text-gray-400 hover:text-white transition-colors text-left">Как работает</button></li>
               <li><button onClick={() => scrollToSection('statistics')} className="text-gray-400 hover:text-white transition-colors text-left">Результаты</button></li>

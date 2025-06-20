@@ -105,8 +105,8 @@ const Banner: React.FC = () => {
                 alt="Support360 Dashboard" 
                 className="md:max-w-none md:w-auto h-auto object-contain"
                 style={{ 
-                  maxHeight: isMobile ? '40vh' : '70vh',
-                  transform: isMobile ? 'translateX(30%) translateY(30%)' : 'translateX(35%) translateY(25%)'
+                  maxHeight: isMobile ? '40vh' : '90vh',
+                  transform: isMobile ? 'translateX(30%) translateY(30%)' : 'translateX(20%) translateY(20%)'
                 }}
               />
 
@@ -116,9 +116,9 @@ const Banner: React.FC = () => {
                 data-speed="-10"
                 style={{ 
                   zIndex: 10,
-                  top: isMobile ? '10px' : '80px',
+                  top: isMobile ? '10px' : '150px',
                   right: isMobile ? '80px' : 'auto',
-                  left: isMobile ? '15%' : '25%'
+                  left: isMobile ? '15%' : '45%'
                 }}
               >
                 <div className="flex items-center">

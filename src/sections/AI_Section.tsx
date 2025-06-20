@@ -4,7 +4,7 @@ import { Brain, Zap, BarChart3, MessageSquare, Settings, TrendingUp } from 'luci
 
 const AI_Section: React.FC = () => {
   return (
-    <section id="ai-section" className="py-20 relative">
+    <section id="ai-section" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <SectionTitle 
           title="Скроро: Умный помощник для каждого"
