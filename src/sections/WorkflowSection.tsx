@@ -14,6 +14,7 @@ const WorkflowSection: React.FC = () => {
         
         <div className="flex flex-col lg:flex-row items-center lg:items-start gap-12 ml-10 mr-10">
           <div className="lg:w-1/2">
+          <h3 className="text-xl font-bold text-gray-800 mb-4">Пример работы</h3>
             <div className="mt-8 space-y-6">
               <div className="flex items-start">
                 <div className="flex-shrink-0">
@@ -24,7 +25,7 @@ const WorkflowSection: React.FC = () => {
                 <div className="ml-4">
                   <h3 className="text-xl font-bold text-gray-800 mb-2">Клиент пишет сообщение</h3>
                   <p className="text-gray-600">
-                    Сканирует код или переходит по ссылке. Открывается привычный чат — где удобно.
+                    Сканирует QR-код или переходит по ссылке. Открывается привычный персональный чат.
                   </p>
                 </div>
               </div>
@@ -78,7 +79,7 @@ const WorkflowSection: React.FC = () => {
               <h3 className="text-xl font-bold text-gray-800 mb-4">Пример диалога</h3>
               <ChatDemo/>
               <p className="text-gray-600 mt-6 text-sm">
-                Реальный пример: гость отеля сообщает о проблеме с кондиционером. 
+                В примере гость отеля сообщает о проблеме с кондиционером. 
                 Система автоматически создаёт заявку, определяет номер комнаты и направляет техническому специалисту.
               </p> 
             </div>

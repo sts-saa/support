@@ -18,7 +18,7 @@ const SupportSection: React.FC = () => {
                 <span className="text-2xl font-bold text-primary">1</span>
               </div>
               <h4 className="font-semibold text-gray-800 mb-2">Быстрый запуск</h4>
-              <p className="text-gray-600 text-sm">Подключаем домен, настраиваем коды и подключения за 15 минут</p>
+              <p className="text-gray-600 text-sm">Подключаем домен, настраиваем коды и подключения</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
