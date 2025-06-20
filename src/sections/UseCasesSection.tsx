@@ -7,7 +7,7 @@ const useCases = [
   {
     icon: <ServerIcon className="w-12 h-12" />,
     title: "IT-поддержка",
-    description: "Обращения не теряются, каждый получает ответ.",
+    description: "Оперативная помощь пользователям, автоматизация частых запросов, отслеживание инцидентов.",
     example: {
       title: "Пример использования в IT",
       description: "Сотрудники пишут в корпоративный Telegram-бот. Система определяет тип проблемы и направляет системному администратору, программисту или в другую службу.",
@@ -23,7 +23,7 @@ const useCases = [
   {
     icon: <Calendar className="w-12 h-12" />,
     title: "Мероприятия и конференции",
-    description: "Один код, и все на связи с организаторами.",
+    description: "Координация помощников, навигация, техподдержка — всё в одном чате.",
     example: {
       title: "Пример использования на мероприятиях",
       description: "Участники мероприятия обращаются за помощью через QR-код, который ведёт в персональный чат поддержки. Система знает программу и может помочь с навигацией. Запросы автоматически распределяются между волонтерами и организаторами.",
@@ -40,7 +40,7 @@ const useCases = [
   {
     icon: <BuildingIcon className="w-12 h-12" />,
     title: "Гостиницы и отели",
-    description: "Гости пишут с любого устройства, вопросы решаются быстро.",
+    description: "Гости решают проблемы не выходя из номера, а персонал видит точное местоположение.",
     example: {
       title: "Пример использования в отеле",
       description: "В каждом номере отеля размещен уникальный QR-код. Гость сканирует код и попадает в чат с поддержкой. Система автоматически определяет номер комнаты и тип запроса.",
@@ -57,7 +57,7 @@ const useCases = [
   {
     icon: <ShoppingBagIcon className="w-12 h-12" />,
     title: "Интернет-магазины",
-    description: "Простое общение с клиентами.",
+    description: "Обработка запросов клиентов по заказам и передача полной истории взаимодействия в CRM.",
     example: {
       title: "Пример использования в интернет-магазине",
       description: "Покупатели попадает в чат прямо из карточки заказа. Система уже знает заказы, статусы доставки и предпочтения, а также помогает с возвратами. ",
@@ -74,7 +74,7 @@ const useCases = [
   {
     icon: <HomeIcon className="w-12 h-12" />,
     title: "ЖКХ и управляющие компании",
-    description: "Простое общение с клиентами.",
+    description: "Автоматическое создание нарядов на работу, оповещение о плановых работах и авариях.",
     example: {
       title: "Пример использования в ЖКХ",
       description: "Жильцы сканируют QR-код на информационном стенде и сразу попадают в чат с диспетчером. Система знает адрес, квартиру и может сразу создать задание на работу.",
@@ -117,13 +117,13 @@ const UseCasesSection: React.FC = () => {
     <section id="use-cases" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <SectionTitle 
-          title="Support360 подходит всем, где важна скорость и простота"
+          title="Support360 подходит всем, кому важна скорость и простота"
           subtitle="Особенно эффективно там, где нужна мобильность и быстрые решения"
           center
         />
         
         {/* Карточки с вариантами использования */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 ml-10 mr-10">
           {useCases.map((useCase, index) => (
             <div key={index} className="flex flex-col">
               <div
@@ -140,7 +140,7 @@ const UseCasesSection: React.FC = () => {
               
               {/* Мобильный выпадающий блок */}
               {isMobile && expandedMobileCard === index && (
-                <div className="mt-4 bg-gray-50 rounded-xl overflow-hidden shadow-md">
+                <div className="mt-4 bg-gray-50 rounded-xl overflow-hidden shadow-md ml-10 mr-10">
                   <div className="p-6">
                     <h3 className="text-xl font-bold text-gray-800 mb-3">{useCase.example.title}</h3>
                     <p className="text-gray-600 mb-4">{useCase.example.description}</p>
@@ -190,7 +190,7 @@ const UseCasesSection: React.FC = () => {
         
         {/* Десктопный блок с примером */}
         {!isMobile && (
-          <div className="mt-16 bg-gray-50 rounded-xl overflow-hidden shadow-md">
+          <div className="mt-16 bg-gray-50 rounded-xl overflow-hidden shadow-md ml-10 mr-10">
             <div className="grid grid-cols-1 md:grid-cols-2">
               <div className="p-8 md:p-12">
                 <h3 className="text-2xl font-bold text-gray-800 mb-4">{selectedCase.example.title}</h3>

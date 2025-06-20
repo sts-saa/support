@@ -56,19 +56,19 @@ const Banner: React.FC = () => {
         ></div>
       </div>
 
-      <div className="container mx-auto px-4 py-20 relative z-10">
-        <div className="flex flex-col lg:flex-row items-center justify-between w-full max-w-7xl mx-auto">
-          <div className="lg:w-1/2 mb-10 lg:mb-0 text-center lg:text-left">
+      <div className="container mx-auto px-4 py-20 relative z-10 flex flex-col items-center">
+        <div className="flex flex-col lg:flex-row items-center justify-center w-full max-w-7xl">
+          <div className="md:w-1/2 mb-10 md:mb-0 text-center md:text-left">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 tracking-tight">
-              Поддержка начинается с первого сообщения
+              Техподдержка в формате мессенджера
             </h1>
-            <p className="text-xl text-gray-200 mb-8 max-w-lg mx-auto lg:mx-0">
-              Support360 — современная поддержка для бизнеса. <br />
-              Общение так же просто, как в чате. <br />
-              Без сложных форм и ожидания.
+            <p className="text-xl text-gray-200 mb-8 max-w-lg mx-auto md:mx-0">
+              Support360 — современная поддержка для бизнеса. <br></br>
+              Простое общение в чате без сложных форм и ожидания.
+
             </p>
-            
-            <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center lg:justify-start relative">
+
+            <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center md:justify-start relative">
               <div className="relative">
                 <a href="https://t.me/dev_support360_bot" target="_blank" rel="noopener noreferrer">
                 <div className="absolute -top-5 left-1/2 -translate-x-1/2 ">
@@ -85,15 +85,15 @@ const Banner: React.FC = () => {
             </div>
           </div>
 
-          {/* Картинка в правом нижнем углу */}
-          <div className="lg:w-1/2 relative h-full">
-            <div className="absolute bottom-0 right-0 w-full max-w-lg parallax-element" data-speed="-15">
+          <div className="flex justify-center relative w-full h-full min-h-[600px] ml-16">
+            <div className="w-full h-full max-w-2xl parallax-element" data-speed="-15">
+
               <img 
                 src="mockup.png" 
                 alt="Support360 Dashboard" 
-                className="w-full h-auto object-contain ml-auto block"
+                className="w-full h-full object-contain"
               />
-              
+
               <div className="absolute -bottom-8 -left-8 bg-white p-4 rounded-lg shadow-lg max-w-xs animate-bounce-slow parallax-element" data-speed="-10">
                 <div className="flex items-center">
                   <CheckCircle2 className="w-6 h-6 text-green-500 mr-2" />

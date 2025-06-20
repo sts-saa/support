@@ -61,8 +61,8 @@ const FeaturesSection: React.FC = () => {
           
           <FeatureCard 
             icon={<MessageCircle />}
-            title="Работает с Telegram"
-            description="Принимайте заявки прямо в Telegram — там, где ваши клиенты уже общаются."
+            title="Работает с Битрикс24 и Telegram"
+            description="Передавайте полную историю взаимодействия в CRM и принимайте заявки прямо в Telegram — там, где ваши клиенты уже общаются."
           />
           
           <FeatureCard 
