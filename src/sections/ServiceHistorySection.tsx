@@ -9,8 +9,7 @@ const ServiceHistorySection: React.FC = () => {
     <section id="service-history" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <SectionTitle 
-          title="История создания Support360"
-          subtitle="Support360 сделали те, кто сами работал в поддержке"
+          title="Мы были по ту сторону поддержки. И сделали лучше."
           center
         />
         

@@ -7,8 +7,7 @@ const WorkflowSection: React.FC = () => {
     <section id="workflow" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <SectionTitle 
-          title="Как это работает"
-          subtitle="Простая схема, которая решает все проблемы сразу"
+          title="Один чат — и всё под контролем"
           center
         />
         
@@ -23,10 +22,7 @@ const WorkflowSection: React.FC = () => {
                   </div>
                 </div>
                 <div className="ml-4">
-                  <h3 className="text-xl font-bold text-gray-800 mb-2">Клиент пишет сообщение</h3>
-                  <p className="text-gray-600">
-                    Сканирует QR-код или переходит по ссылке. Открывается привычный персональный чат.
-                  </p>
+                  <h3 className="text-xl text-gray-800 mb-2">Клиент сканирует QR и пишет в привычный чат</h3>
                 </div>
               </div>
               
@@ -37,10 +33,7 @@ const WorkflowSection: React.FC = () => {
                   </div>
                 </div>
                 <div className="ml-4">
-                  <h3 className="text-xl font-bold text-gray-800 mb-2">Система передаёт нужному человеку</h3>
-                  <p className="text-gray-600">
-                    Определяет тип проблемы и автоматически направляет правильному специалисту.
-                  </p>
+                  <h3 className="text-xl text-gray-800 mb-2">Система понимает, с чем обращение, и сразу передаёт его нужному специалисту</h3>
                 </div>
               </div>
               
@@ -51,10 +44,7 @@ const WorkflowSection: React.FC = () => {
                   </div>
                 </div>
                 <div className="ml-4">
-                  <h3 className="text-xl font-bold text-gray-800 mb-2">Сотрудник быстро отвечает</h3>
-                  <p className="text-gray-600">
-                    Получает уведомление, видит всю информацию. Рутину берёт на себя система.
-                  </p>
+                  <h3 className="text-xl text-gray-800 mb-2">Сотрудник отвечает быстро — остальное автоматизирует система</h3>
                 </div>
               </div>
               
@@ -65,10 +55,7 @@ const WorkflowSection: React.FC = () => {
                   </div>
                 </div>
                 <div className="ml-4">
-                  <h3 className="text-xl font-bold text-gray-800 mb-2">Каждый клиент получает ответ</h3>
-                  <p className="text-gray-600">
-                    Вся переписка хранится и не теряется. Клиент получает ответ в том же чате.
-                  </p>
+                  <h3 className="text-xl text-gray-800 mb-2">Вся переписка сохраняется. Никто не теряется.</h3>
                 </div>
               </div>
             </div>

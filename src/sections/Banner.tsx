@@ -73,12 +73,8 @@ const Banner: React.FC = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 tracking-tight">
               Техподдержка в формате мессенджера
             </h1>
-            <p className="text-xl text-gray-200 max-w-lg mx-auto md:mx-0">
-              Support360 — современная поддержка для бизнеса.
-            </p>
             <p className="text-xl text-gray-200 mb-8 max-w-lg mx-auto md:mx-0">
-
-              Простое общение в чате без сложных форм и ожидания.
+              Support360 — современная поддержка для бизнеса. Без форм, без ожидания.
             </p>
 
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center md:justify-start">
@@ -88,7 +84,7 @@ const Banner: React.FC = () => {
                     <ArrowDown className="w-6 h-6 md:w-8 md:h-8 text-white animate-bounce" />
                   </div>
                   <Button className="w-full !bg-primary !text-white hover:!bg-primary-dark py-3">
-                    Попробовать демо
+                    Посмотреть, как работет
                   </Button>
                 </a>
               </div>
@@ -96,7 +92,7 @@ const Banner: React.FC = () => {
                 onClick={scrollToContact} 
                 className="w-full !text-white border-white hover:!bg-white/10 py-3"
               >
-                Оставить заявку
+                Задать вопрос
               </Button>
             </div>
           </div>

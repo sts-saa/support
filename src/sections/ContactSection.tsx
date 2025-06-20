@@ -74,8 +74,8 @@ const ContactSection: React.FC = () => {
     <section id="contact" className="py-20 bg-secondary">
       <div className="container mx-auto px-4">
         <SectionTitle 
-          title="Support360 — поддержка, которая понятна каждому"
-          subtitle="Запустите Support360 уже сегодня."
+          title="Хватит терять клиентов из-за поддержки"
+          subtitle="Запустите Support360 сегодня. Без обучения. Без сложностей и затяжных интеграций."
           center
           light
         />

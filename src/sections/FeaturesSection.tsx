@@ -18,7 +18,6 @@ const FeaturesSection: React.FC = () => {
       <div className="container mx-auto px-4">
         <SectionTitle 
           title="Почему выбирают Support360"
-          subtitle="Просто, быстро, понятно"
           center
         />
         
@@ -26,7 +25,7 @@ const FeaturesSection: React.FC = () => {
           <FeatureCard 
             icon={<MessageSquareIcon />}
             title="Формат чата"
-            description="Клиенты пишут в чат, а система сама превращает это в заявку и передаёт нужному сотруднику."
+            description="Всё понятно с первого взгляда — пользователь пишет в привычный чат."
           />
           
           <FeatureCard 
@@ -62,7 +61,7 @@ const FeaturesSection: React.FC = () => {
           <FeatureCard 
             icon={<MessageCircle />}
             title="Работает с Битрикс24 и Telegram"
-            description="Передавайте полную историю взаимодействия в CRM и принимайте заявки прямо в Telegram — там, где ваши клиенты уже общаются."
+            description="Передавайте полную историю взаимодействия в CRM и принимайте заявки прямо в Telegram."
           />
           
           <FeatureCard 

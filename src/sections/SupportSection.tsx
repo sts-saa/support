@@ -6,8 +6,7 @@ const SupportSection: React.FC = () => {
     <section id="support" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <SectionTitle 
-          title="Внедрение и поддержка"
-          subtitle="Мы не просто даём доступ к системе — мы помогаем настроить её под ваши процессы и обучаем команду"
+          title="Запуск — за день. Помощь — всегда рядом."
           center
         />
 
@@ -17,22 +16,19 @@ const SupportSection: React.FC = () => {
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-primary">1</span>
               </div>
-              <h4 className="font-semibold text-gray-800 mb-2">Быстрый запуск</h4>
-              <p className="text-gray-600 text-sm">Настраиваем систему и регистрируем пользователей</p>
+              <h2 className="font-semibold text-gray-800 mb-2">Настроим под ваши задачи</h2>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-primary">2</span>
               </div>
-              <h4 className="font-semibold text-gray-800 mb-2">Предоставляем инструкции</h4>
-              <p className="text-gray-600 text-sm">Готовая документация и видеоинструкции</p>
+              <h2 className="font-semibold text-gray-800 mb-2">Объясним всё понятно</h2>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-primary">3</span>
               </div>
-              <h4 className="font-semibold text-gray-800 mb-2">Всегда готовы помочь</h4>
-              <p className="text-gray-600 text-sm">Помогаем решать вопросы и улучшать процессы</p>
+              <h2 className="font-semibold text-gray-800 mb-2">Будем сопровождать в работе</h2>
             </div>
           </div>
         </div>

@@ -43,9 +43,6 @@ const StatisticsSection: React.FC = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
           Результат: ваша поддержка работает как часы
           </h2>
-          <p className="text-xl text-gray-200">
-          Клиенты довольны быстрыми ответами, сотрудники не тонут в хаосе, а вы видите полную картину работы.
-          </p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -93,18 +90,6 @@ const StatisticsSection: React.FC = () => {
               <p className="mt-4 text-lg font-medium">{stat.label}</p>
             </div>
           ))}
-        </div>
-        
-        <div className="mt-16 text-center">
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 max-w-3xl mx-auto">
-            <h3 className="text-2xl font-bold mb-4">
-              Перестаньте терять клиентов из-за плохой поддержки
-            </h3>
-            <p className="text-lg text-gray-200 mb-6">
-              Каждая потерянная заявка — это потерянный клиент и репутация. <br></br>
-              Support360 гарантирует, что ни одно обращение не останется без ответа.
-            </p>
-          </div>
         </div>
       </div>
     </section>
