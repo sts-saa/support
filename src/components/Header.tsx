@@ -69,9 +69,9 @@ const Header: React.FC = () => {
           </div>
         </button>
         
-        <nav className="hidden md:flex items-center space-x-6">
+        <nav className="hidden md:flex items-center space-x-6 mr-5 ml-5">
           <a href="#use-cases" className={`text-sm font-medium hover:text-primary transition-colors ${isScrolled ? 'text-gray-800' : 'text-white'}`}>
-            Кейсы
+            Применение
           </a>
           <a href="#features" className={`text-sm font-medium hover:text-primary transition-colors ${isScrolled ? 'text-gray-800' : 'text-white'}`}>
             Возможности
@@ -93,7 +93,7 @@ const Header: React.FC = () => {
           </a>
         </nav>
         
-        <div className="hidden md:flex items-center space-x-3">
+        <div className="hidden md:flex items-center space-x-3 mr-10">
           <Button 
             onClick={openLogin}
             className={`text-sm px-4 py-2 ${isScrolled 

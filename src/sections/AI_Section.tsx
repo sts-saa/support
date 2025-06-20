@@ -7,15 +7,12 @@ const AI_Section: React.FC = () => {
     <section id="ai-section" className="py-20 bg-gray-50 relative">
       <div className="container mx-auto px-4">
         <SectionTitle 
-          title="Умный помощник для каждого"
+          title="Скроро: Умный помощник для каждого"
           subtitle="Поддержка, которая помогает и понимает"
           center
         />
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16 ml-10 mr-10">
-          <div className="absolute top-1 right-1/4 bg-orange-500 text-white px-10 py-2 transform rotate-12 font-bold text-xl shadow-lg">
-            Скоро
-          </div>
           <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
             <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
               <Brain className="w-6 h-6 text-primary" />

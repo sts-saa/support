@@ -63,17 +63,16 @@ const Banner: React.FC = () => {
               Техподдержка в формате мессенджера
             </h1>
             <p className="text-xl text-gray-200 mb-8 max-w-lg mx-auto md:mx-0">
-              Support360 — современная поддержка для бизнеса. <br></br>
+              Support360 — современная поддержка для бизнеса. <br />
               Простое общение в чате без сложных форм и ожидания.
-
             </p>
 
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center md:justify-start relative">
               <div className="relative">
                 <a href="https://t.me/dev_support360_bot" target="_blank" rel="noopener noreferrer">
-                <div className="absolute -top-5 left-1/2 -translate-x-1/2 ">
-                  <ArrowDown className="w-10 h-10 text-white animate-bounce" />
-                </div>
+                  <div className="absolute -top-5 left-1/2 -translate-x-1/2 ">
+                    <ArrowDown className="w-10 h-10 text-white animate-bounce" />
+                  </div>
                   <Button className="text-[calc(0.8rem_+_0.3vw)] px-[calc(1rem_+_0.5vw)] py-[calc(0.5rem_+_0.3vw)] w-full !bg-primary !text-white hover:!bg-primary-dark">
                     Попробовать демо
                   </Button>
@@ -85,20 +84,28 @@ const Banner: React.FC = () => {
             </div>
           </div>
 
-          <div className="flex justify-center relative w-full h-full min-h-[600px] ml-16">
-            <div className="w-full h-full max-w-2xl parallax-element" data-speed="-15">
-
+          {/* Измененный блок для изображения */}
+          <div className="relative w-full h-full min-h-[500px] md:min-h-[600px] flex items-end justify-end">
+            <div className="absolute bottom-0 right-0 parallax-element" data-speed="-15">
               <img 
                 src="mockup.png" 
                 alt="Support360 Dashboard" 
-                className="w-full h-full object-contain"
+                className="h-auto object-contain"
+                style={{ 
+                  maxHeight: '70vh',
+                  transform: 'translateX(38%) translateY(28%)' // Сдвигаем вниз на 10%
+                }}
               />
 
-              <div className="absolute -bottom-8 -left-8 bg-white p-4 rounded-lg shadow-lg max-w-xs animate-bounce-slow parallax-element" data-speed="-10">
+              <div 
+                className="absolute top-20 left-1/4 bg-white p-4 rounded-lg shadow-lg max-w-xs animate-bounce-slow parallax-element" 
+                data-speed="-10"
+                style={{ zIndex: 10 }} // Гарантируем, что плашка будет поверх изображения
+              >
                 <div className="flex items-center">
                   <CheckCircle2 className="w-6 h-6 text-green-500 mr-2" />
                   <div>
-                    <p className="font-semibold text-gray-800">Запуск за 15 минут</p>
+                    <p className="font-semibold text-gray-800">Запуск за 1 день</p>
                     <p className="text-sm text-gray-600">Внедрение без IT-отдела</p>
                   </div>
                 </div>

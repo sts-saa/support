@@ -1,7 +1,14 @@
-import React, { useState, useEffect  } from 'react';
+import React, { useState, useEffect } from 'react';
 import SectionTitle from '../components/SectionTitle';
 import UseCaseCard from '../components/UseCaseCard';
 import { BuildingIcon, HomeIcon, ServerIcon, ShoppingBagIcon, Calendar } from 'lucide-react';
+
+// Добавляем импорты для изображений
+import itImage from '/it.jpeg';
+import eventImage from '/event.jpg';
+import hotelImage from '/hotel.jpeg';
+import ecommerceImage from '/ecommerce.jpg';
+import apartmentsImage from '/apartments.jpg';
 
 const useCases = [
   {
@@ -16,8 +23,8 @@ const useCases = [
         "Подключение к корпоративным системам",
         "Быстрая передача срочных проблем руководству"
       ],
-      message:"Сотрудник: Петров П.П., Отдел: Бухгалтерия",
-      image: "it.jpeg"
+      message: "Сотрудник: Петров П.П., Отдел: Бухгалтерия",
+      image: itImage // Используем импортированное изображение
     }
   },
   {
@@ -33,8 +40,8 @@ const useCases = [
         "Навигация по площадке мероприятия",
         "Сбор отзывов в реальном времени"
       ],
-      message:"Участник: Козлов К.К., Мероприятие: TechConf2024",
-      image: "event.jpg"
+      message: "Участник: Козлов К.К., Мероприятие: TechConf2024",
+      image: eventImage
     }
   },
   {
@@ -50,8 +57,8 @@ const useCases = [
         "Контроль времени ответа персонала",
         "Статистика по типам обращений для улучшения сервиса"
       ],
-      message:"Местоположение: Номер 305, Гость: Иванов И.И.",
-      image: "hotel.jpeg"
+      message: "Местоположение: Номер 305, Гость: Иванов И.И.",
+      image: hotelImage
     }
   },
   {
@@ -67,8 +74,8 @@ const useCases = [
         "Персональные рекомендации",
         "Подключение к системам магазина и склада"
       ],
-      message:"Клиент: Сидорова А.В., Заказ: #12345",
-      image: "ecommerce.jpg"
+      message: "Клиент: Сидорова А.В., Заказ: #12345",
+      image: ecommerceImage
     }
   },
   {
@@ -84,8 +91,8 @@ const useCases = [
         "Уведомления о плановых отключениях",
         "Контроль качества работ через обратную связь"
       ],
-      message:"Местоположение: ул. Ленина 15, кв. 128",
-      image: "apartments.jpg"
+      message: "Местоположение: ул. Ленина 15, кв. 128",
+      image: apartmentsImage
     }
   }
 ];
@@ -122,62 +129,64 @@ const UseCasesSection: React.FC = () => {
           center
         />
         
-        {/* Карточки с вариантами использования */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 ml-10 mr-10">
+        {/* Карточки с вариантами использования - убрали боковые отступы */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 px-2">
           {useCases.map((useCase, index) => (
             <div key={index} className="flex flex-col">
               <div
                 data-use-case-card
                 onClick={() => handleCardClick(index)}
-                className={`cursor-pointer ${selectedCase.title === useCase.title ? 'ring-2 ring-primary rounded-lg h-full' : 'h-full'}`}
+                className={`cursor-pointer rounded-lg overflow-hidden transition-all ${
+                  selectedCase.title === useCase.title 
+                    ? 'ring-2 ring-primary shadow-md' 
+                    : 'hover:shadow-md'
+                }`}
               >
                 <UseCaseCard
                   icon={useCase.icon}
                   title={useCase.title}
                   description={useCase.description}
+                  compact={isMobile} // Добавляем проп для компактного вида
                 />
               </div>
               
-              {/* Мобильный выпадающий блок */}
+              {/* Мобильный выпадающий блок - сделаем более компактным */}
               {isMobile && expandedMobileCard === index && (
-                <div className="mt-4 bg-gray-50 rounded-xl overflow-hidden shadow-md ml-10 mr-10">
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold text-gray-800 mb-3">{useCase.example.title}</h3>
-                    <p className="text-gray-600 mb-4">{useCase.example.description}</p>
-                    <ul className="space-y-2">
+                <div className="mt-2 bg-white rounded-lg border border-gray-200 shadow-sm">
+                  <div className="p-4">
+                    <h3 className="text-lg font-bold text-gray-800 mb-2">{useCase.example.title}</h3>
+                    <p className="text-gray-600 text-sm mb-3">{useCase.example.description}</p>
+                    <ul className="space-y-1">
                       {useCase.example.features.map((feature, i) => (
                         <li key={i} className="flex items-start">
-                          <svg className="w-5 h-5 text-primary mt-1 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <svg className="w-4 h-4 text-primary mt-1 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                           </svg>
-                          <span className="text-gray-700">{feature}</span>
+                          <span className="text-gray-700 text-sm">{feature}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
-                  <div className="bg-primary-dark relative min-h-[250px]">
-                    <div className="bg-primary-dark relative min-h-[300px]">
-                      <img 
-                        src={selectedCase.example.image}
-                        alt={`Использование Support360 в ${selectedCase.title}`} 
-                        className="absolute inset-0 w-full h-full object-cover opacity-50"
-                      />
-                      
-                      <div className="absolute inset-0 flex items-center justify-center p-8">
-                        <div className="bg-white/90 p-6 rounded-lg shadow-lg max-w-sm">
-                          <div className="flex items-center mb-4">
-                            <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center mr-3">
-                              <span className="text-white font-bold">S</span>
-                            </div>
-                            <div>
-                              <p className="font-semibold">Support360</p>
-                              <p className="text-xs text-gray-600">{selectedCase.title}</p>
-                            </div>
+                  <div className="bg-primary-dark relative h-40">
+                    <img 
+                      src={useCase.example.image}
+                      alt={`Использование Support360 в ${useCase.title}`} 
+                      className="w-full h-full object-cover opacity-50"
+                    />
+                    <div className="absolute inset-0 flex items-center justify-center p-4">
+                      <div className="bg-white/90 p-4 rounded shadow max-w-xs">
+                        <div className="flex items-center mb-2">
+                          <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center mr-2">
+                            <span className="text-white text-sm font-bold">S</span>
                           </div>
-                          <p className="text-gray-800 mb-4">Добрый день! Чем могу помочь?</p>
-                          <div className="bg-primary/10 p-3 rounded text-primary text-sm">
-                            {selectedCase.example.message}
+                          <div>
+                            <p className="font-semibold text-sm">Support360</p>
+                            <p className="text-xs text-gray-600">{useCase.title}</p>
                           </div>
+                        </div>
+                        <p className="text-gray-800 text-sm mb-2">Добрый день! Чем могу помочь?</p>
+                        <div className="bg-primary/10 p-2 rounded text-primary text-xs">
+                          {useCase.example.message}
                         </div>
                       </div>
                     </div>
@@ -188,17 +197,17 @@ const UseCasesSection: React.FC = () => {
           ))}
         </div>
         
-        {/* Десктопный блок с примером */}
+        {/* Десктопный блок с примером - убрали боковые отступы */}
         {!isMobile && (
-          <div className="mt-16 bg-gray-50 rounded-xl overflow-hidden shadow-md ml-10 mr-10">
+          <div className="mt-8 bg-white rounded-xl shadow-md">
             <div className="grid grid-cols-1 md:grid-cols-2">
-              <div className="p-8 md:p-12">
-                <h3 className="text-2xl font-bold text-gray-800 mb-4">{selectedCase.example.title}</h3>
-                <p className="text-gray-600 mb-6">{selectedCase.example.description}</p>
-                <ul className="space-y-3">
+              <div className="p-6 md:p-8">
+                <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-3">{selectedCase.example.title}</h3>
+                <p className="text-gray-600 mb-4">{selectedCase.example.description}</p>
+                <ul className="space-y-2">
                   {selectedCase.example.features.map((feature, index) => (
                     <li key={index} className="flex items-start">
-                      <svg className="w-5 h-5 text-primary mt-1 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-5 h-5 text-primary mt-1 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                       </svg>
                       <span className="text-gray-700">{feature}</span>
@@ -210,12 +219,11 @@ const UseCasesSection: React.FC = () => {
                 <img 
                   src={selectedCase.example.image}
                   alt={`Использование Support360 в ${selectedCase.title}`} 
-                  className="absolute inset-0 w-full h-full object-cover opacity-50"
+                  className="w-full h-full object-cover opacity-50"
                 />
-                
-                <div className="absolute inset-0 flex items-center justify-center p-8">
-                  <div className="bg-white/90 p-6 rounded-lg shadow-lg max-w-sm">
-                    <div className="flex items-center mb-4">
+                <div className="absolute inset-0 flex items-center justify-center p-4">
+                  <div className="bg-white/90 p-5 rounded-lg shadow-lg max-w-xs">
+                    <div className="flex items-center mb-3">
                       <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center mr-3">
                         <span className="text-white font-bold">S</span>
                       </div>
@@ -224,8 +232,8 @@ const UseCasesSection: React.FC = () => {
                         <p className="text-xs text-gray-600">{selectedCase.title}</p>
                       </div>
                     </div>
-                    <p className="text-gray-800 mb-4">Добрый день! Чем могу помочь?</p>
-                    <div className="bg-primary/10 p-3 rounded text-primary text-sm">
+                    <p className="text-gray-800 mb-3">Добрый день! Чем могу помочь?</p>
+                    <div className="bg-primary/10 p-2 rounded text-primary text-sm">
                       {selectedCase.example.message}
                     </div>
                   </div>

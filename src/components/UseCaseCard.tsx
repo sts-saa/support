@@ -4,6 +4,7 @@ interface UseCaseCardProps {
   icon: ReactNode;
   title: string;
   description: string;
+  compact?: boolean; 
 }
 
 const UseCaseCard: React.FC<UseCaseCardProps> = ({ icon, title, description }) => {
