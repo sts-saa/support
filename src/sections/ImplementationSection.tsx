@@ -39,6 +39,19 @@ const ImplementationSection: React.FC = () => {
             </div>
           </div>
 
+          <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 relative">
+            <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+              <Settings className="w-6 h-6 text-primary" />
+            </div>
+            <h3 className="text-xl font-bold mb-3 text-gray-800">Простая настройка</h3>
+            <p className="text-gray-600 mb-4">
+              Просто скажите: "Если пишут про лифт — отправляй в ЖЭК". Система сама настроит правило.
+            </p>
+            <div className="bg-gray-50 p-3 rounded text-sm text-gray-700">
+              <strong>Результат:</strong> Настройка системы без технических знаний
+            </div>
+          </div>
+
           <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
             <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
               <BarChart3 className="w-6 h-6 text-primary" />
@@ -48,14 +61,11 @@ const ImplementationSection: React.FC = () => {
                Автоматически анализирует диалог и формирует краткое резюме
             </p>
             <div className="bg-gray-50 p-3 rounded text-sm text-gray-700">
-              <strong>Результат:</strong> 
+              <strong>Результат:</strong> Мгновенно понимание проблемы без необходимости читать всё переписку.
             </div>
           </div>
 
           <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 relative">
-            <div className="absolute top-4 right-4 bg-orange-100 text-orange-600 px-3 py-1 rounded-full text-xs font-semibold">
-              Скоро
-            </div>
             <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
               <MessageSquare className="w-6 h-6 text-primary" />
             </div>
@@ -69,9 +79,6 @@ const ImplementationSection: React.FC = () => {
           </div>
 
           <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 relative">
-            <div className="absolute top-4 right-4 bg-orange-100 text-orange-600 px-3 py-1 rounded-full text-xs font-semibold">
-              Скоро
-            </div>
             <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
               <TrendingUp className="w-6 h-6 text-primary" />
             </div>
@@ -81,22 +88,6 @@ const ImplementationSection: React.FC = () => {
             </p>
             <div className="bg-gray-50 p-3 rounded text-sm text-gray-700">
               <strong>Результат:</strong> Можно заранее усилить смену или включить автоответчик
-            </div>
-          </div>
-
-          <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 relative">
-            <div className="absolute top-4 right-4 bg-orange-100 text-orange-600 px-3 py-1 rounded-full text-xs font-semibold">
-              Скоро
-            </div>
-            <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-              <Settings className="w-6 h-6 text-primary" />
-            </div>
-            <h3 className="text-xl font-bold mb-3 text-gray-800">Простая настройка</h3>
-            <p className="text-gray-600 mb-4">
-              Просто скажите: "Если пишут про лифт — отправляй в ЖЭК". Система сама настроит правило.
-            </p>
-            <div className="bg-gray-50 p-3 rounded text-sm text-gray-700">
-              <strong>Результат:</strong> Настройка системы без технических знаний
             </div>
           </div>
         </div>
