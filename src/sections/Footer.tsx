@@ -37,7 +37,7 @@ const Footer: React.FC = () => {
     <footer className="bg-gray-900 text-white py-16">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
-          <div className="md:col-span-2">
+          <div className="md:col-span-2 ml-10">
             <div className="flex items-center mb-6">
               <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center mr-3">
                 <svg 
@@ -85,13 +85,13 @@ const Footer: React.FC = () => {
                 rel="noopener noreferrer"
                 className="bg-primary hover:bg-primary-dark text-white px-6 py-2 rounded-lg font-semibold transition-colors"
               >
-                Попробовать демо
+                Посмотреть, как работает
               </a>
               <button 
                 onClick={scrollToContact}
                 className="border-2 border-primary text-primary hover:bg-primary/10 px-6 py-2 rounded-lg font-semibold transition-colors"
               >
-                Связаться
+                Задать вопрос
               </button>
             </div>
           </div>
@@ -161,7 +161,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
         
-        <div className="mt-12 pt-8 border-t border-gray-800">
+        <div className="mt-12 pt-8 border-t border-gray-800 ml-10 mr-10">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-center md:text-left mb-4 md:mb-0">
               <p className="text-gray-400">

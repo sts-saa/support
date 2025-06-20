@@ -6,7 +6,7 @@ const SupportSection: React.FC = () => {
     <section id="support" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <SectionTitle 
-          title="Запуск — за день. Помощь — всегда рядом."
+          title="Запускаем за день. Остаемся рядом."
           center
         />
 

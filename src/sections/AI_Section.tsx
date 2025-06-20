@@ -7,8 +7,8 @@ const AI_Section: React.FC = () => {
     <section id="ai-section" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <SectionTitle 
-          title="Скроро: Умный помощник для каждого"
-          subtitle="Поддержка, которая помогает и понимает"
+          title="Скроро: Умный помощник"
+          subtitle="Экономит время команды и отвечает за рутину"
           center
         />
         

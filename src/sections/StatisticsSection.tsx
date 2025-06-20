@@ -41,8 +41,11 @@ const StatisticsSection: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-          Результат: ваша поддержка работает как часы
+          Результат: Поддержка отвечает быстро. Клиенты возвращаются.
           </h2>
+          <p className="text-lg">
+            Данные на основе пользователей Support360
+          </p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
