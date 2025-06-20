@@ -70,16 +70,22 @@ const Header: React.FC = () => {
         </button>
         
         <nav className="hidden md:flex items-center space-x-6">
-          <a href="#features" className={`text-sm font-medium hover:text-primary transition-colors ${isScrolled ? 'text-gray-800' : 'text-white'}`}>
-            Возможности
-          </a>
-          <a href="#how-it-works" className={`text-sm font-medium hover:text-primary transition-colors ${isScrolled ? 'text-gray-800' : 'text-white'}`}>
-            История создания
-          </a>
           <a href="#use-cases" className={`text-sm font-medium hover:text-primary transition-colors ${isScrolled ? 'text-gray-800' : 'text-white'}`}>
             Кейсы
           </a>
-          <a href="#implementation" className={`text-sm font-medium hover:text-primary transition-colors ${isScrolled ? 'text-gray-800' : 'text-white'}`}>
+          <a href="#features" className={`text-sm font-medium hover:text-primary transition-colors ${isScrolled ? 'text-gray-800' : 'text-white'}`}>
+            Возможности
+          </a>
+          <a href="#workflow" className={`text-sm font-medium hover:text-primary transition-colors ${isScrolled ? 'text-gray-800' : 'text-white'}`}>
+            Как работает
+          </a>
+          <a href="#statistics" className={`text-sm font-medium hover:text-primary transition-colors ${isScrolled ? 'text-gray-800' : 'text-white'}`}>
+            Результаты
+          </a>
+          <a href="#service-history" className={`text-sm font-medium hover:text-primary transition-colors ${isScrolled ? 'text-gray-800' : 'text-white'}`}>
+            История
+          </a>
+          <a href="#ai-section" className={`text-sm font-medium hover:text-primary transition-colors ${isScrolled ? 'text-gray-800' : 'text-white'}`}>
             Умный помощник
           </a>
           <a href="#faq" className={`text-sm font-medium hover:text-primary transition-colors ${isScrolled ? 'text-gray-800' : 'text-white'}`}>
@@ -150,11 +156,11 @@ const Header: React.FC = () => {
         <div className="md:hidden bg-white shadow-lg absolute w-full">
           <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
             <a 
-              href="#how-it-works" 
+              href="#use-cases" 
               className="font-medium py-2 hover:text-primary border-b border-gray-100"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              История создания
+              Кейсы
             </a>
             <a 
               href="#features" 
@@ -164,14 +170,28 @@ const Header: React.FC = () => {
               Возможности
             </a>
             <a 
-              href="#use-cases" 
+              href="#workflow" 
               className="font-medium py-2 hover:text-primary border-b border-gray-100"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Кейсы
+              Как работает
             </a>
             <a 
-              href="#implementation" 
+              href="#statistics" 
+              className="font-medium py-2 hover:text-primary border-b border-gray-100"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Результаты
+            </a>
+            <a 
+              href="#service-history" 
+              className="font-medium py-2 hover:text-primary border-b border-gray-100"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              История
+            </a>
+            <a 
+              href="#ai-section" 
               className="font-medium py-2 hover:text-primary border-b border-gray-100"
               onClick={() => setIsMobileMenuOpen(false)}
             >

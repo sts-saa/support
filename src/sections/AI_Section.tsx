@@ -2,13 +2,13 @@ import React from 'react';
 import SectionTitle from '../components/SectionTitle';
 import { Brain, Zap, BarChart3, MessageSquare, Settings, TrendingUp } from 'lucide-react';
 
-const ImplementationSection: React.FC = () => {
+const AI_Section: React.FC = () => {
   return (
-    <section id="implementation" className="py-20 bg-gray-50">
+    <section id="ai-section" className="py-20 bg-gray-50 relative">
       <div className="container mx-auto px-4">
         <SectionTitle 
           title="Умный помощник для каждого"
-          subtitle="Поддержка с искусственным интеллектом"
+          subtitle="Поддержка, которая помогает и понимает"
           center
         />
         
@@ -17,7 +17,7 @@ const ImplementationSection: React.FC = () => {
             <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
               <Brain className="w-6 h-6 text-primary" />
             </div>
-            <h3 className="text-xl font-bold mb-3 text-gray-800">Автоматическое распределение заявок</h3>
+            <h3 className="text-xl font-bold mb-3 text-gray-800">Система сама передаёт обращение нужному специалисту</h3>
             <p className="text-gray-600 mb-4">
               Анализирует сообщение и определяет тип запроса, срочность и нужного исполнителя.
             </p>
@@ -43,7 +43,7 @@ const ImplementationSection: React.FC = () => {
             <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
               <Settings className="w-6 h-6 text-primary" />
             </div>
-            <h3 className="text-xl font-bold mb-3 text-gray-800">Простая настройка</h3>
+            <h3 className="text-xl font-bold mb-3 text-gray-800">Настроить можно простыми словами</h3>
             <p className="text-gray-600 mb-4">
               Просто скажите: "Если пишут про лифт — отправляй в ЖЭК". Система сама настроит правило.
             </p>
@@ -56,12 +56,12 @@ const ImplementationSection: React.FC = () => {
             <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
               <BarChart3 className="w-6 h-6 text-primary" />
             </div>
-            <h3 className="text-xl font-bold mb-3 text-gray-800">Сводка по каждому диалогу</h3>
+            <h3 className="text-xl font-bold mb-3 text-gray-800">Вся история общения сохраняется</h3>
             <p className="text-gray-600 mb-4">
                Автоматически анализирует диалог и формирует краткое резюме
             </p>
             <div className="bg-gray-50 p-3 rounded text-sm text-gray-700">
-              <strong>Результат:</strong> Мгновенно понимание проблемы без необходимости читать всё переписку.
+              <strong>Результат:</strong> Мгновенно понимание проблемы без необходимости читать всю переписку.
             </div>
           </div>
 
@@ -69,7 +69,7 @@ const ImplementationSection: React.FC = () => {
             <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
               <MessageSquare className="w-6 h-6 text-primary" />
             </div>
-            <h3 className="text-xl font-bold mb-3 text-gray-800">Подсказки для сотрудников</h3>
+            <h3 className="text-xl font-bold mb-3 text-gray-800">Подсказки для сотрудников, как отвечать лучше</h3>
             <p className="text-gray-600 mb-4">
             Генерирует персональный ответ на основе контекста: тип клиента, история обращений, как отвечать лучше.
             </p>
@@ -82,7 +82,7 @@ const ImplementationSection: React.FC = () => {
             <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
               <TrendingUp className="w-6 h-6 text-primary" />
             </div>
-            <h3 className="text-xl font-bold mb-3 text-gray-800">Прогноз нагрузки</h3>
+            <h3 className="text-xl font-bold mb-3 text-gray-800">Прогноз нагрузки — никто не останется без ответа</h3>
             <p className="text-gray-600 mb-4">
               Анализирует пиковые периоды и заранее прогнозирует всплески обращений.
             </p>
@@ -92,11 +92,16 @@ const ImplementationSection: React.FC = () => {
           </div>
         </div>
 
-        <div className="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-xl p-8 md:p-12">
+        <div className="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-xl p-8 md:p-12 relative">
+          {/* Диагональная лента "Скоро" */}
+          <div className="absolute top-4 right-4 bg-orange-500 text-white px-4 py-2 transform rotate-12 font-bold text-sm shadow-lg">
+            Скоро
+          </div>
+          
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
               <h3 className="text-2xl font-bold text-gray-800 mb-4">
-               Умный ассистент руководителя
+               Руководитель видит советы, как сделать поддержку ещё лучше
               </h3>
               <p className="text-gray-600 mb-6">
                 Система будет анализировать и давать комплексные рекомендации по улучшению работы службы поддержки — 
@@ -137,4 +142,4 @@ const ImplementationSection: React.FC = () => {
   );
 };
 
-export default ImplementationSection;
+export default AI_Section;

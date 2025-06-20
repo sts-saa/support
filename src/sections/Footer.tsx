@@ -19,6 +19,20 @@ const Footer: React.FC = () => {
     }
   };
 
+  const scrollToUseCaseAndSelect = (caseIndex: number) => {
+    const useCasesSection = document.getElementById('use-cases');
+    if (useCasesSection) {
+      useCasesSection.scrollIntoView({ behavior: 'smooth' });
+      // Небольшая задержка для прокрутки, затем имитируем клик по карточке
+      setTimeout(() => {
+        const cards = document.querySelectorAll('[data-use-case-card]');
+        if (cards[caseIndex]) {
+          (cards[caseIndex] as HTMLElement).click();
+        }
+      }, 500);
+    }
+  };
+
   return (
     <footer className="bg-gray-900 text-white py-16">
       <div className="container mx-auto px-4">
@@ -85,20 +99,22 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-lg font-semibold mb-6">Решение</h3>
             <ul className="space-y-3">
-              <li><button onClick={() => scrollToSection('how-it-works')} className="text-gray-400 hover:text-white transition-colors text-left">История создания</button></li>
-              <li><button onClick={() => scrollToSection('features')} className="text-gray-400 hover:text-white transition-colors text-left">Возможности</button></li>
               <li><button onClick={() => scrollToSection('use-cases')} className="text-gray-400 hover:text-white transition-colors text-left">Кейсы применения</button></li>
-              <li><button onClick={() => scrollToSection('implementation')} className="text-gray-400 hover:text-white transition-colors text-left">Умный помощник</button></li>
+              <li><button onClick={() => scrollToSection('features')} className="text-gray-400 hover:text-white transition-colors text-left">Возможности</button></li>
+              <li><button onClick={() => scrollToSection('workflow')} className="text-gray-400 hover:text-white transition-colors text-left">Как работает</button></li>
+              <li><button onClick={() => scrollToSection('statistics')} className="text-gray-400 hover:text-white transition-colors text-left">Результаты</button></li>
+              <li><button onClick={() => scrollToSection('service-history')} className="text-gray-400 hover:text-white transition-colors text-left">История создания</button></li>
+              <li><button onClick={() => scrollToSection('ai-section')} className="text-gray-400 hover:text-white transition-colors text-left">Умный помощник</button></li>
               <li><button onClick={() => scrollToSection('faq')} className="text-gray-400 hover:text-white transition-colors text-left">Частые вопросы</button></li>
             </ul>
             
             <h3 className="text-lg font-semibold mb-4 mt-8">Сферы применения</h3>
             <ul className="space-y-2 text-sm">
-              <li><button onClick={() => scrollToSection('use-cases')} className="text-gray-400 hover:text-white transition-colors text-left">IT-поддержка</button></li>
-              <li><button onClick={() => scrollToSection('use-cases')} className="text-gray-400 hover:text-white transition-colors text-left">Мероприятия и конференции</button></li>
-              <li><button onClick={() => scrollToSection('use-cases')} className="text-gray-400 hover:text-white transition-colors text-left">Гостиницы и отели</button></li>
-              <li><button onClick={() => scrollToSection('use-cases')} className="text-gray-400 hover:text-white transition-colors text-left">Интернет-магазины</button></li>
-              <li><button onClick={() => scrollToSection('use-cases')} className="text-gray-400 hover:text-white transition-colors text-left">ЖКХ и управляющие компании</button></li>
+              <li><button onClick={() => scrollToUseCaseAndSelect(0)} className="text-gray-400 hover:text-white transition-colors text-left">IT-поддержка</button></li>
+              <li><button onClick={() => scrollToUseCaseAndSelect(1)} className="text-gray-400 hover:text-white transition-colors text-left">Мероприятия и конференции</button></li>
+              <li><button onClick={() => scrollToUseCaseAndSelect(2)} className="text-gray-400 hover:text-white transition-colors text-left">Гостиницы и отели</button></li>
+              <li><button onClick={() => scrollToUseCaseAndSelect(3)} className="text-gray-400 hover:text-white transition-colors text-left">Интернет-магазины</button></li>
+              <li><button onClick={() => scrollToUseCaseAndSelect(4)} className="text-gray-400 hover:text-white transition-colors text-left">ЖКХ и управляющие компании</button></li>
             </ul>
           </div>
           

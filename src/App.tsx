@@ -3,10 +3,10 @@ import Header from './components/Header';
 import Banner from './sections/Banner';
 import FeaturesSection from './sections/FeaturesSection';
 import StatisticsSection from './sections/StatisticsSection';
-import HowItWorksSection from './sections/HowItWorksSection';
+import ServiceHistorySection from './sections/ServiceHistorySection';
 import WorkflowSection from './sections/WorkflowSection';
 import UseCasesSection from './sections/UseCasesSection';
-import ImplementationSection from './sections/ImplementationSection';
+import AI_Section from './sections/AI_Section';
 import SupportSection from './sections/SupportSection';
 import FAQSection from './sections/FAQSection';
 import ContactSection from './sections/ContactSection';
@@ -26,8 +26,8 @@ function App() {
       <FeaturesSection />
       <WorkflowSection />
       <StatisticsSection />
-      <HowItWorksSection />
-      <ImplementationSection />
+      <ServiceHistorySection />
+      <AI_Section />
       <SupportSection />
       <FAQSection />
       <ContactSection />

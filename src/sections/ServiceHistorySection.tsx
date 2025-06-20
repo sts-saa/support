@@ -1,21 +1,39 @@
-import React from 'react';
+import React, { useState } from 'react';
 import SectionTitle from '../components/SectionTitle';
+import { ChevronDown, ChevronUp } from 'lucide-react';
 
-const HowItWorksSection: React.FC = () => {
+const ServiceHistorySection: React.FC = () => {
+  const [isExpanded, setIsExpanded] = useState(false);
+
   return (
-    <section id="how-it-works" className="py-20">
+    <section id="service-history" className="py-20">
       <div className="container mx-auto px-4">
         <SectionTitle 
           title="История создания Support360"
-          subtitle="Мы сами работали в поддержке и знаем все проблемы изнутри"
+          subtitle="Support360 сделали те, кто сами работал в поддержке"
           center
         />
         
-        <div className="max-w-4xl mx-auto mb-16">
+        <div className="max-w-4xl mx-auto text-center mb-8">
+          <button
+            onClick={() => setIsExpanded(!isExpanded)}
+            className="inline-flex items-center px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors font-semibold"
+          >
+            {isExpanded ? 'Скрыть историю' : 'Узнать историю создания'}
+            {isExpanded ? (
+              <ChevronUp className="ml-2 w-5 h-5" />
+            ) : (
+              <ChevronDown className="ml-2 w-5 h-5" />
+            )}
+          </button>
+        </div>
+
+        <div className={`max-w-4xl mx-auto transition-all duration-500 overflow-hidden ${
+          isExpanded ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
+        }`}>
           <div className="bg-white rounded-xl shadow-lg p-8 md:p-12">
             <div className="prose prose-lg max-w-none">
               <p className="text-gray-700 mb-6">
-                Support360 сделали те, кто сами работал в поддержке.
                 Мы знаем, как бывает сложно — и создали решение, которое просто работает.
               </p>
               
@@ -52,4 +70,4 @@ const HowItWorksSection: React.FC = () => {
   );
 };
 
-export default HowItWorksSection;
+export default ServiceHistorySection;
