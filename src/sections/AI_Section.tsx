@@ -7,8 +7,8 @@ const AI_Section: React.FC = () => {
     <section id="ai-section" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <SectionTitle 
-          title="Скроро: Умный помощник"
-          subtitle="Экономит время команды и отвечает за рутину"
+          title="Скоро: умный помощник для вашей команды"
+          subtitle="Экономит время, решает рутину и помогает отвечать быстрее"
           center
         />
         
@@ -96,7 +96,7 @@ const AI_Section: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
               <h3 className="text-2xl font-bold text-gray-800 mb-4">
-                Личный помощник руководителя технической поддержки
+                Личный помощник руководителя
               </h3>
               <p className="text-gray-600 mb-6">
                 Система видит всю картину и подсказывает, что можно сделать лучше.

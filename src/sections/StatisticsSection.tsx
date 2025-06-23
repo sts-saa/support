@@ -41,10 +41,10 @@ const StatisticsSection: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-          Результат: высокая скорость отклика — высокий уровень доверия клиентов
+          Результат: всегда довольный клиент
           </h2>
           <p className="text-lg">
-            Данные на основе пользователей Support360
+            На основе данных Support360
           </p>
         </div>
         
