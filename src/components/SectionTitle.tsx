@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface SectionTitleProps {
-  title: string;
+  title: string | React.ReactNode;
   subtitle?: string;
   center?: boolean;
   light?: boolean;
