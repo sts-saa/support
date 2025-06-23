@@ -12,7 +12,7 @@ const ServiceHistorySection: React.FC = () => {
         />
         
         <div className="max-w-4xl mx-auto transition-all duration-500 overflow-hidden">
-          <div className="bg-primary/10 rounded-xl shadow-lg p-8 md:p-12">
+          <div className="bg-primary/10 rounded-xl p-8 md:p-12">
             <div className="prose prose-lg max-w-none">
               <p className="text-gray-700 mb-6 text-xl">
                 Мы сами работаем в поддержке. Видели, как теряются заявки, клиенты, сотрудники. И как «системы тикетов» превращают помощь в бюрократию.
