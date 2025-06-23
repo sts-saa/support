@@ -108,7 +108,7 @@ const Header: React.FC = () => {
               ? '!bg-primary !text-white hover:!bg-primary-dark' 
               : '!bg-primary !text-white hover:!bg-primary-dark'}`}
           >
-            Задать вопрос
+            Оставить заявку
           </Button>
         </div>
         
