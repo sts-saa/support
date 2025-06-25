@@ -31,7 +31,7 @@ const CookieWidget: React.FC = () => {
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
             <div className="flex-1">
               <p className="text-sm text-gray-700">
-                Мы используем файлы cookie для того, чтобы сайт support360.ru работал стабильно, а вам было максимально удобно.
+                Мы используем файлы cookie для того, чтобы сайт support360.ru работал стабильно, а вам было максимально удобно.<br></br>
                 Продолжая пользоваться сайтом или нажимая "Принять", вы соглашаетесь на использование всех cookie в соответствии с нашей{' '}
                 <button
                   onClick={openCookiePolicy}
@@ -61,7 +61,8 @@ const CookieWidget: React.FC = () => {
       >
         <div className="prose max-w-none text-black">
           <p className="mb-4">
-            Сайт https://support360.ru/ и его поддомены (далее — «Сайт») использует файлы cookie и аналогичные технологии для обеспечения удобства пользователей (далее — «Пользователи»), анализа трафика и улучшения работы сервиса.
+            Сайт  <a href="https://support360.ru/" className="text-primary transition-colors">
+            https://support360.ru/ </a> и его поддомены (далее — «Сайт») использует файлы cookie и аналогичные технологии для обеспечения удобства пользователей (далее — «Пользователи»), анализа трафика и улучшения работы сервиса.
           </p>
 
           <h2 className="text-xl font-bold mb-4">1. Что такое cookie</h2>
@@ -74,7 +75,7 @@ const CookieWidget: React.FC = () => {
             <li>Анализировать использование сайта</li>
           </ul>
 
-          <h2 className="text-xl font-bold mb-4">2. Как мы используем cookie?</h2>
+          <h2 className="text-xl font-bold mb-4">2. Как мы используем cookie</h2>
           <p className="mb-4">Мы применяем cookie для следующих целей:</p>
           
           <div className="overflow-x-auto mb-4">
@@ -184,10 +185,15 @@ const CookieWidget: React.FC = () => {
           <h3 className="text-lg font-semibold mb-2">4.2. Через настройки браузера</h3>
           <p className="mb-2">Инструкции для популярных браузеров:</p>
           <ul className="list-disc pl-6 mb-4">
-            <li><strong>Google Chrome:</strong> https://support.google.com/chrome/answer/95647?hl=ru</li>
-            <li><strong>Mozilla Firefox:</strong> https://support.mozilla.org/ru/kb/kuki-informaciya-kotoruyu-veb-sajty-hranyat-na-vas</li>
-            <li><strong>Safari:</strong> https://support.apple.com/ru-ru/guide/safari/sfri11471/mac</li>
-            <li><strong>Microsoft Edge:</strong> https://support.microsoft.com/ru-ru/microsoft-edge/удаление-файлов-cookie-в-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09</li>
+            <li> <a href="https://support.google.com/chrome/answer/95647?hl=ru" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline"> 
+                <strong>Google Chrome</strong> </a> </li>
+            <li> <a href="https://support.mozilla.org/ru/kb/kuki-informaciya-kotoruyu-veb-sajty-hranyat-na-vas" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+              <strong>Mozilla Firefox</strong></a></li>
+            <li> <a href="https://support.apple.com/ru-ru/guide/safari/sfri11471/mac" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                  <strong>Safari</strong> </a></li>
+            <li> <a href="https://support.microsoft.com/ru-ru/microsoft-edge/удаление-файлов-cookie-в-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                <strong>Microsoft Edge</strong> </a>
+            </li>
           </ul>
           <p className="mb-4">
             <strong>Важно:</strong> Отключение строго необходимых cookie нарушит работу сайта. Вы не сможете авторизоваться или использовать основные функции.
@@ -235,7 +241,7 @@ const CookieWidget: React.FC = () => {
             <li>Требовать удаления ваших данных</li>
           </ul>
           <p className="mb-4">
-            Для реализации прав обращайтесь: info@support360.ru
+            Для реализации прав обращайтесь: <a href="mailto:info@support360.ru" className="text-primary transition-colors"> info@support360.ru</a>
           </p>
 
           <h2 className="text-xl font-bold mb-4">7. Изменения в политике</h2>
