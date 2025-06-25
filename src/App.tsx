@@ -12,6 +12,7 @@ import FAQSection from './sections/FAQSection';
 import ContactSection from './sections/ContactSection';
 import Footer from './sections/Footer';
 import ScrollToTop from './components/ScrollToTop';
+import CookieWidget from './components/CookieWidget';
 
 function App() {
   useEffect(() => {
@@ -33,6 +34,7 @@ function App() {
       <ContactSection />
       <Footer />
       <ScrollToTop />
+      <CookieWidget />
     </div>
   );
 }
