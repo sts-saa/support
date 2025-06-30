@@ -138,7 +138,7 @@ const Footer: React.FC = () => {
                   <a href="tel:+73833838004" className="text-white hover:text-primary transition-colors">
                     +7 (383) 383-80-04
                   </a>
-                  <p className="text-gray-400 text-sm">Пн-Пт: 9:00-18:00 (НСК)</p>
+                  <p className="text-gray-400 text-sm">Пн-Вс: 9:00-18:00 (НСК)</p>
                 </div>
               </li>
               
