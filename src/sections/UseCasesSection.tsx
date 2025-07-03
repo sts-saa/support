@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import SectionTitle from '../components/SectionTitle';
 import UseCaseCard from '../components/UseCaseCard';
-import { BuildingIcon, HomeIcon, ServerIcon, ShoppingBagIcon, Calendar } from 'lucide-react';
+import { BuildingIcon, HomeIcon, ServerIcon, Calendar } from 'lucide-react';
 
 // Добавляем импорты для изображений
 import itImage from '/it.jpeg';
 import eventImage from '/event.jpg';
 import hotelImage from '/hotel.jpeg';
-import ecommerceImage from '/ecommerce.jpg';
 import apartmentsImage from '/apartments.jpg';
 
 const useCases = [
@@ -57,22 +56,6 @@ const useCases = [
       ],
       message: "Местоположение: Номер 305, Гость: Иванов И.И.",
       image: hotelImage
-    }
-  },
-  {
-    icon: <ShoppingBagIcon className="w-12 h-12" />,
-    title: "Интернет-магазины",
-    example: {
-      title: "Верните клиента до того, как он уйдёт",
-      description: "Покупатели обращаются прямо из заказа. Система знает всё: номер, статус, историю. Поддержка отвечает быстро — и клиенты остаются.",
-      features: [
-        "Автоматическая подгрузка информации о заказах",
-        "Быстрое оформление возвратов и обменов",
-        "Персональные рекомендации",
-        "Подключение к системам магазина и склада"
-      ],
-      message: "Клиент: Сидорова А.В., Заказ: #12345",
-      image: ecommerceImage
     }
   },
   {
@@ -126,7 +109,7 @@ const UseCasesSection: React.FC = () => {
         />
         
         {/* Карточки с вариантами использования */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 ml-10 mr-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 ml-10 mr-10">
           {useCases.map((useCase, index) => (
             <div 
               key={index} 
