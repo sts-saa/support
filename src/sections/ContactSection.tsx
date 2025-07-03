@@ -87,18 +87,12 @@ const ContactSection: React.FC = () => {
               
               <div className="bg-gradient-to-r from-green-50 to-blue-50 border border-green-200 rounded-lg p-6 mb-6">
                 <h4 className="font-semibold text-gray-800 mb-3">Что вы получите:</h4>
-                <ul className="space-y-2 text-sm text-gray-700">
+                <ul className="space-y-2 text-sm text-gray-700 mb-3">
                   <li className="flex items-start">
                     <svg className="w-4 h-4 text-green-500 mt-0.5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                     </svg>
                     Анализ ваших текущих процессов поддержки
-                  </li>
-                  <li className="flex items-start">
-                    <svg className="w-4 h-4 text-green-500 mt-0.5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-                    </svg>
-                    Расчёт экономии от внедрения Support360
                   </li>
                   <li className="flex items-start">
                     <svg className="w-4 h-4 text-green-500 mt-0.5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -113,6 +107,8 @@ const ContactSection: React.FC = () => {
                     План внедрения
                   </li>
                 </ul>
+
+                <p className="text-sm text-gray-700">30 минут — и вы поймёте, как можно упростить поддержку без сложного внедрения.</p>
               </div>
               
               {isSubmitted ? (
