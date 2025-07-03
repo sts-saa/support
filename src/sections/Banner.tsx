@@ -74,7 +74,7 @@ const Banner: React.FC = () => {
               Техподдержка в формате мессенджера
             </h1>
             <p className="text-xl text-gray-200 mb-8 max-w-lg mx-auto md:mx-0">
-              Support360 — современная поддержка для бизнеса. Без форм, без ожидания.
+              Support360 — никаких сложных форм и лишних шагов. Только чат — и решение.
             </p>
 
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center md:justify-start">
@@ -97,7 +97,7 @@ const Banner: React.FC = () => {
             </div>
           </div>
 
-          {/* Блок с изображением - видим на всех устройствах */}
+          {/* Блок с изображением*/}
           <div className="relative w-full h-full min-h-[300px] md:min-h-[500px] flex items-center justify-center md:items-end md:justify-end mt-8 md:mt-0">
             <div className="parallax-element" data-speed="-15">
               <img 
@@ -110,7 +110,7 @@ const Banner: React.FC = () => {
                 }}
               />
 
-              {/* Плашка "Запуск за 1 день" - адаптированная для всех устройств */}
+              {/* Плашка "Запуск за 1 день" */}
               <div 
                 className="absolute bg-white p-3 md:p-4 rounded-lg shadow-lg max-w-[200px] md:max-w-xs animate-bounce-slow parallax-element" 
                 data-speed="-10"
