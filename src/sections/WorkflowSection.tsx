@@ -44,7 +44,7 @@ const WorkflowSection: React.FC = () => {
                   </div>
                 </div>
                 <div className="ml-4">
-                  <h3 className="text-xl text-gray-800 mb-2">Сотрудник отвечает быстро — остальное автоматизирует система</h3>
+                  <h3 className="text-xl text-gray-800 mb-2">Сотрудник отвечает быстро — система подсказывает</h3>
                 </div>
               </div>
               
@@ -55,7 +55,7 @@ const WorkflowSection: React.FC = () => {
                   </div>
                 </div>
                 <div className="ml-4">
-                  <h3 className="text-xl text-gray-800 mb-2">Вся переписка сохраняется. Никто не теряется.</h3>
+                  <h3 className="text-xl text-gray-800 mb-2">Вся переписка сохраняется. Обращения не теряются.</h3>
                 </div>
               </div>
             </div>

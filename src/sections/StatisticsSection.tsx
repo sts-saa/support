@@ -1,13 +1,13 @@
 import React, { useEffect, useRef, useState } from 'react';
 
 const statistics = [
-  { value: 75, label: 'быстрее обработка обращений', symbol: '%' },
-  { value: 90, label: 'клиентов довольны поддержкой', symbol: '%' },
-  { value: 60, label: 'меньше рутины для команды', symbol: '%' },
+  { value: 75, label: 'Быстрее обработка обращений', symbol: '%' },
+  { value: 90, label: 'Клиентов довольны поддержкой', symbol: '%' },
+  { value: 60, label: 'Меньше рутины для команды', symbol: '%' },
   { label: 'время запуска', text: '15 мин' }
 ];
 
-const StatisticsSection: React.FC = () => {
+  const StatisticsSection: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
   
