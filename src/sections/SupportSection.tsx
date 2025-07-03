@@ -6,7 +6,7 @@ const SupportSection: React.FC = () => {
     <section id="support" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <SectionTitle 
-          title="Запускаем за день. Остаемся рядом."
+          title="Запускается за день. Без интеграторов."
           center
         />
 
@@ -16,19 +16,22 @@ const SupportSection: React.FC = () => {
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-primary">1</span>
               </div>
-              <h2 className="font-semibold text-gray-800 mb-2">Настроим под ваши задачи</h2>
+              <h2 className="font-semibold text-gray-800 mb-2">Создаёте портал за 15 минут</h2>
+              <p className="text-sm text-gray-700">  Простой мастер запуска — всё понятно с первого шага. Без кода, без ИТ-специалистов. </p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-primary">2</span>
               </div>
-              <h2 className="font-semibold text-gray-800 mb-2">Объясним всё понятно</h2>
+              <h2 className="font-semibold text-gray-800 mb-2">Подключаете Telegram и сотрудников</h2>
+              <p className="text-sm text-gray-700"> Пользователь сканирует QR-код или переходит по ссылке. Дальше — авторизация по номеру в Telegram. Всё работает без паролей и порталов.</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-primary">3</span>
               </div>
-              <h2 className="font-semibold text-gray-800 mb-2">Будем сопровождать в работе</h2>
+              <h2 className="font-semibold text-gray-800 mb-2">Готово к работе</h2>
+              <p className="text-sm text-gray-700">Обращения начинают поступать в тот же день. Если нужно — подскажем, как адаптировать под ваши задачи.</p>
             </div>
           </div>
         </div>
