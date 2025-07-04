@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import SectionTitle from '../components/SectionTitle';
 import UseCaseCard from '../components/UseCaseCard';
-import { BuildingIcon, HomeIcon, ServerIcon, Calendar, ChevronLeft, ChevronRight } from 'lucide-react';
+import { BuildingIcon, HomeIcon, ServerIcon, Calendar} from 'lucide-react';
 
 // Добавляем импорты для изображений
 import itImage from '/it.jpeg';
@@ -78,7 +78,6 @@ const useCases = [
 
 const UseCasesSection: React.FC = () => {
   const [selectedCase, setSelectedCase] = useState(useCases[0]);
-  const [selectedIndex, setSelectedIndex] = useState(0);
   const [expandedMobileCard, setExpandedMobileCard] = useState<number | null>(0);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -95,22 +94,9 @@ const UseCasesSection: React.FC = () => {
 
   const handleCardClick = (index: number) => {
     setSelectedCase(useCases[index]);
-    setSelectedIndex(index);
     if (isMobile) {
       setExpandedMobileCard(expandedMobileCard === index ? null : index);
     }
-  };
-
-  const handlePrevious = () => {
-    const newIndex = selectedIndex > 0 ? selectedIndex - 1 : useCases.length - 1;
-    setSelectedIndex(newIndex);
-    setSelectedCase(useCases[newIndex]);
-  };
-
-  const handleNext = () => {
-    const newIndex = selectedIndex < useCases.length - 1 ? selectedIndex + 1 : 0;
-    setSelectedIndex(newIndex);
-    setSelectedCase(useCases[newIndex]);
   };
 
   return (
@@ -193,24 +179,7 @@ const UseCasesSection: React.FC = () => {
         
         {/* Десктопный блок с примером */}
         {!isMobile && (
-          <div className="mt-16 bg-gray-50 rounded-xl overflow-hidden shadow-md ml-10 mr-10 relative">
-            {/* Стрелки навигации */}
-            <button
-              onClick={handlePrevious}
-              className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110"
-              aria-label="Предыдущий кейс"
-            >
-              <ChevronLeft className="w-6 h-6 text-gray-700" />
-            </button>
-            
-            <button
-              onClick={handleNext}
-              className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110"
-              aria-label="Следующий кейс"
-            >
-              <ChevronRight className="w-6 h-6 text-gray-700" />
-            </button>
-
+          <div className="mt-16 bg-gray-50 rounded-xl overflow-hidden shadow-md ml-10 mr-10">
             <div className="grid grid-cols-1 md:grid-cols-2">
               <div className="p-8 md:p-12">
                 <h3 className="text-2xl font-bold text-gray-800 mb-4">{selectedCase.example.title}</h3>
@@ -251,22 +220,6 @@ const UseCasesSection: React.FC = () => {
                   </div>
                 </div>
               </div>
-            </div>
-
-            {/* Индикаторы карточек */}
-            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
-              {useCases.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => handleCardClick(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-200 ${
-                    selectedIndex === index 
-                      ? 'bg-primary scale-110' 
-                      : 'bg-white/60 hover:bg-white/80'
-                  }`}
-                  aria-label={`Перейти к кейсу ${index + 1}`}
-                />
-              ))}
             </div>
           </div>
         )}
