@@ -1,5 +1,6 @@
 import React from 'react';
 import SectionTitle from '../components/SectionTitle';
+import ImageOptimized from '../components/ImageOptimized';
 import { Brain, Zap, BarChart3, MessageSquare, Settings, TrendingUp } from 'lucide-react';
 
 const AI_Section: React.FC = () => {
