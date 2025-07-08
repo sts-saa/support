@@ -15,6 +15,7 @@ import Footer from './sections/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import CookieWidget from './components/CookieWidget';
 import SEOHead from './components/SEOHead';
+import BreadcrumbsContainer from './components/BreadcrumbsContainer';
 
 function App() {
   useEffect(() => {
@@ -26,6 +27,7 @@ function App() {
       <div className="font-sans">
         <SEOHead />
         <Header />
+        <BreadcrumbsContainer />
         <Banner />
         <UseCasesSection />
         <FeaturesSection />
