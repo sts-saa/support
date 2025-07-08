@@ -107,8 +107,8 @@ const Banner: React.FC = () => {
                 className="md:max-w-none md:w-auto h-auto object-contain"
                 loading="eager"
                 style={{ 
-                  maxHeight: isMobile ? '40vh' : '90vh',
-                  transform: isMobile ? 'translateX(30%) translateY(30%)' : 'translateX(20%) translateY(20%)'
+                  maxHeight: isMobile ? '30vh' : '60vh',
+                  transform: isMobile ? 'translateX(20%) translateY(20%)' : 'translateX(15%) translateY(15%)'
                 }}
               />
 

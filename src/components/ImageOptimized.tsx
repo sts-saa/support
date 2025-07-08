@@ -7,6 +7,7 @@ interface ImageOptimizedProps {
   width?: number;
   height?: number;
   loading?: 'lazy' | 'eager';
+  style?: React.CSSProperties;
 }
 
 const ImageOptimized: React.FC<ImageOptimizedProps> = ({
@@ -15,7 +16,8 @@ const ImageOptimized: React.FC<ImageOptimizedProps> = ({
   className = '',
   width,
   height,
-  loading = 'lazy'
+  loading = 'lazy',
+  style
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
@@ -47,6 +49,7 @@ const ImageOptimized: React.FC<ImageOptimizedProps> = ({
         width={width}
         height={height}
         loading={loading}
+        style={style}
         onLoad={handleLoad}
         onError={handleError}
         className={`transition-opacity duration-300 ${
