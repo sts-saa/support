@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import SectionTitle from '../components/SectionTitle';
 import UseCaseCard from '../components/UseCaseCard';
+import ImageOptimized from '../components/ImageOptimized';
 import { BuildingIcon, HomeIcon, ServerIcon, Calendar, ChevronLeft, ChevronRight } from 'lucide-react';
 
 // Добавляем импорты для изображений
@@ -118,7 +119,7 @@ const UseCasesSection: React.FC = () => {
       <div className="container mx-auto px-4">
         <SectionTitle 
           title="Кому нужен Support360"
-          subtitle="Подходит тем, кому важна скорость и простота"
+          subtitle="Решения для различных сфер бизнеса — от IT-поддержки до гостиничного сервиса"
           center
         />
 
@@ -162,10 +163,11 @@ const UseCasesSection: React.FC = () => {
                     </ul>
                   </div>
                   <div className="bg-primary-dark relative h-40">
-                    <img 
+                    <ImageOptimized
                       src={useCase.example.image}
                       alt={`Использование Support360 в ${useCase.title}`} 
                       className="w-full h-full object-cover opacity-50"
+                      loading="lazy"
                     />
                     <div className="absolute inset-0 flex items-center justify-center p-4">
                       <div className="bg-white/90 p-4 rounded shadow max-w-xs">
@@ -246,10 +248,11 @@ const UseCasesSection: React.FC = () => {
                   </ul>
                 </div>
                 <div className="bg-primary-dark relative min-h-[300px]">                      
-                  <img 
+                  <ImageOptimized
                     src={selectedCase.example.image}
                     alt={`Использование Support360 в ${selectedCase.title}`} 
                     className="absolute inset-0 w-full h-full object-cover opacity-50"
+                    loading="lazy"
                   />
 
                   <div className="absolute inset-0 flex items-center justify-center p-8">

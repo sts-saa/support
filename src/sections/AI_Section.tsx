@@ -123,10 +123,11 @@ const AI_Section: React.FC = () => {
               </ul>
             </div>
             <div className="relative">
-              <img 
+              <ImageOptimized
                 src="devices.png" 
                 alt="Support360 на разных устройствах" 
                 className="w-auto h-auto mx-auto"
+                loading="lazy"
               />
             </div>
           </div>

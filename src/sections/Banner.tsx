@@ -100,10 +100,11 @@ const Banner: React.FC = () => {
           {/* Блок с изображением*/}
           <div className="relative w-full h-full min-h-[300px] md:min-h-[500px] flex items-center justify-center md:items-end md:justify-end mt-8 md:mt-0">
             <div className="parallax-element" data-speed="-15">
-              <img 
+              <ImageOptimized
                 src="mockup.png" 
                 alt="Support360 Dashboard" 
                 className="md:max-w-none md:w-auto h-auto object-contain"
+                loading="eager"
                 style={{ 
                   maxHeight: isMobile ? '40vh' : '90vh',
                   transform: isMobile ? 'translateX(30%) translateY(30%)' : 'translateX(20%) translateY(20%)'

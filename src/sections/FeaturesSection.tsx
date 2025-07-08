@@ -18,6 +18,7 @@ const FeaturesSection: React.FC = () => {
       <div className="container mx-auto px-4">
         <SectionTitle 
           title="Почему выбирают Support360"
+          subtitle="Современные возможности для эффективной поддержки клиентов"
           center
         />
         

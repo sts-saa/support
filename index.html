@@ -2,12 +2,158 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Support360 — Поддержка начинается с первого сообщения</title>
+    
+    <!-- SEO Meta Tags -->
+    <title>Support360 — Техподдержка в формате мессенджера | Запуск за 1 день</title>
+    <meta name="description" content="Support360 — современная система техподдержки без сложных форм. Клиенты пишут в чат, получают быстрые ответы. Запуск за 15 минут, без IT-отдела. Попробуйте бесплатно!" />
+    <meta name="keywords" content="техподдержка, система поддержки клиентов, чат поддержка, helpdesk, CRM, автоматизация поддержки, мессенджер поддержка, Telegram поддержка" />
+    <meta name="author" content="ООО ИТ Лаборатория" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://support360.ru/" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://support360.ru/" />
+    <meta property="og:title" content="Support360 — Техподдержка в формате мессенджера" />
+    <meta property="og:description" content="Современная система техподдержки без сложных форм. Клиенты пишут в чат, получают быстрые ответы. Запуск за 15 минут." />
+    <meta property="og:image" content="https://support360.ru/og-image.jpg" />
+    <meta property="og:site_name" content="Support360" />
+    <meta property="og:locale" content="ru_RU" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://support360.ru/" />
+    <meta property="twitter:title" content="Support360 — Техподдержка в формате мессенджера" />
+    <meta property="twitter:description" content="Современная система техподдержки без сложных форм. Клиенты пишут в чат, получают быстрые ответы." />
+    <meta property="twitter:image" content="https://support360.ru/og-image.jpg" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    
+    <!-- Fonts with preload for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet"></noscript>
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Support360",
+      "description": "Система техподдержки в формате мессенджера для быстрого решения обращений клиентов",
+      "url": "https://support360.ru",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "1990",
+        "priceCurrency": "RUB",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "1990",
+          "priceCurrency": "RUB",
+          "unitText": "MONTH"
+        }
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "ООО ИТ Лаборатория",
+        "url": "https://support360.ru",
+        "logo": "https://support360.ru/logo.png",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+7-383-383-80-04",
+          "contactType": "customer service",
+          "email": "info@support360.ru",
+          "availableLanguage": "Russian"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "ул. Большевистская, 97",
+          "addressLocality": "Новосибирск",
+          "postalCode": "630007",
+          "addressCountry": "RU"
+        }
+      },
+      "featureList": [
+        "Техподдержка в формате чата",
+        "Интеграция с Telegram",
+        "Автоматическое распределение заявок",
+        "QR-код авторизация",
+        "Контроль времени ответа",
+        "Массовые уведомления"
+      ]
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "ООО ИТ Лаборатория",
+      "alternateName": "Support360",
+      "url": "https://support360.ru",
+      "logo": "https://support360.ru/logo.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+7-383-383-80-04",
+        "contactType": "customer service",
+        "email": "info@support360.ru",
+        "availableLanguage": "Russian",
+        "areaServed": "RU"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "ул. Большевистская, 97",
+        "addressLocality": "Новосибирск",
+        "postalCode": "630007",
+        "addressCountry": "RU"
+      },
+      "sameAs": [
+        "https://t.me/dev_support360_bot"
+      ]
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Чем отличается Support360?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Мы убрали всё лишнее: формы, порталы и тикеты. Support360 работает как чат — пользователь просто пишет в одно окно, а система сама определяет суть запроса и направляет его нужному специалисту."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Сложно ли запустить сервис?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Support360 запускается за 15 минут — без участия ИТ. Создаёте портал, подключаете Telegram — и уже принимаете обращения."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Сколько стоит?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "В базовой версии - 1 990₽/мес + 490₽ за каждого дополнительного оператора"
+          }
+        }
+      ]
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>
