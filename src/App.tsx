@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { HelmetProvider } from 'react-helmet-async';
 import Header from './components/Header';
 import Banner from './sections/Banner';
 import FeaturesSection from './sections/FeaturesSection';
@@ -13,6 +14,7 @@ import ContactSection from './sections/ContactSection';
 import Footer from './sections/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import CookieWidget from './components/CookieWidget';
+import SEOHead from './components/SEOHead';
 
 function App() {
   useEffect(() => {
@@ -20,22 +22,25 @@ function App() {
   }, []);
 
   return (
-    <div className="font-sans">
-      <Header />
-      <Banner />
-      <UseCasesSection />
-      <FeaturesSection />
-      <WorkflowSection />
-      <StatisticsSection />
-      <ServiceHistorySection />
-      <AI_Section />
-      <SupportSection />
-      <FAQSection />
-      <ContactSection />
-      <Footer />
-      <ScrollToTop />
-      <CookieWidget />
-    </div>
+    <HelmetProvider>
+      <div className="font-sans">
+        <SEOHead />
+        <Header />
+        <Banner />
+        <UseCasesSection />
+        <FeaturesSection />
+        <WorkflowSection />
+        <StatisticsSection />
+        <ServiceHistorySection />
+        <AI_Section />
+        <SupportSection />
+        <FAQSection />
+        <ContactSection />
+        <Footer />
+        <ScrollToTop />
+        <CookieWidget />
+      </div>
+    </HelmetProvider>
   );
 }
 

@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Button from '../components/Button';
+import ImageOptimized from '../components/ImageOptimized';
 import { CheckCircle2, ArrowDown } from 'lucide-react';
 
 const Banner: React.FC = () => {
