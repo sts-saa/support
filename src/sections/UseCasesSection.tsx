@@ -98,17 +98,22 @@ const UseCasesSection: React.FC = () => {
 
     checkScreenSize();
     
-    // Дебаунс для оптимизации
-    let timeoutId: number;
+    // Дебаунс для оптимизации - используем useRef для сохранения timeoutId
+    let timeoutId: number | undefined;
+    
     const debouncedResize = () => {
-      clearTimeout(timeoutId);
+      if (timeoutId) {
+        clearTimeout(timeoutId);
+      }
       timeoutId = window.setTimeout(checkScreenSize, 150);
     };
     
-    window.addEventListener('resize', debouncedResize);
+    window.addEventListener('resize', debouncedResize, { passive: true });
 
     return () => {
-      clearTimeout(timeoutId);
+      if (timeoutId) {
+        clearTimeout(timeoutId);
+      }
       window.removeEventListener('resize', debouncedResize);
     };
   }, []);
