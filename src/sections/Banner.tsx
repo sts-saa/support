@@ -3,22 +3,33 @@ import Button from '../components/Button';
 import ImageOptimized from '../components/ImageOptimized';
 import { CheckCircle2, ArrowDown } from 'lucide-react';
 
+/**
+ * Компонент главного баннера с параллакс-эффектом
+ * Оптимизирован для производительности на мобильных устройствах
+ */
 const Banner: React.FC = () => {
   const heroRef = useRef<HTMLDivElement>(null);
   const [isMobile, setIsMobile] = useState(false);
   
   useEffect(() => {
-    // Определяем мобильное устройство при монтировании
     const checkIsMobile = () => {
       setIsMobile(window.innerWidth < 768);
     };
     
     checkIsMobile();
-    window.addEventListener('resize', checkIsMobile);
     
-    // Параллакс-эффект
+    // Дебаунс для оптимизации производительности
+    let timeoutId: NodeJS.Timeout;
+    const debouncedResize = () => {
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(checkIsMobile, 150);
+    };
+    
+    window.addEventListener('resize', debouncedResize);
+    
+    // Параллакс-эффект только для десктопа
     const handleMouseMove = (e: MouseEvent) => {
-      if (!heroRef.current) return;
+      if (!heroRef.current || isMobile) return;
       
       const { clientX, clientY } = e;
       const { width, height, left, top } = heroRef.current.getBoundingClientRect();
@@ -31,17 +42,22 @@ const Banner: React.FC = () => {
         const element = el as HTMLElement;
         const speed = parseFloat(element.getAttribute('data-speed') || '0');
         
-        element.style.transform = `translate(${x * speed}px, ${y * speed}px)`;
+        // Используем transform3d для аппаратного ускорения
+        element.style.transform = `translate3d(${x * speed}px, ${y * speed}px, 0)`;
       });
     };
     
-    document.addEventListener('mousemove', handleMouseMove);
+    // Добавляем параллакс только на десктопе
+    if (!isMobile) {
+      document.addEventListener('mousemove', handleMouseMove, { passive: true });
+    }
     
     return () => {
-      window.removeEventListener('resize', checkIsMobile);
+      clearTimeout(timeoutId);
+      window.removeEventListener('resize', debouncedResize);
       document.removeEventListener('mousemove', handleMouseMove);
     };
-  }, []);
+  }, [isMobile]);
 
   const scrollToContact = () => {
     const contactSection = document.getElementById('contact');
@@ -52,7 +68,7 @@ const Banner: React.FC = () => {
   
   return (
     <section ref={heroRef} className="relative min-h-screen bg-gradient-to-br from-secondary via-secondary to-primary flex items-center overflow-hidden">
-      {/* Decorative elements - скрыть на мобильных */}
+      {/* Декоративные элементы - только для десктопа */}
       <div className="absolute inset-0 overflow-hidden">
         <div 
           className="absolute -top-10 -right-10 w-64 h-64 rounded-full bg-primary/30 blur-3xl parallax-element hidden md:block"
@@ -98,7 +114,7 @@ const Banner: React.FC = () => {
             </div>
           </div>
 
-          {/* Блок с изображением*/}
+          {/* Блок с изображением - оптимизирован для мобильных */}
           <div className="relative w-full h-full min-h-[300px] md:min-h-[500px] flex items-center justify-center md:items-end md:justify-end mt-8 md:mt-0">
             <div className="parallax-element" data-speed="-15">
               <ImageOptimized
@@ -112,7 +128,7 @@ const Banner: React.FC = () => {
                 }}
               />
 
-              {/* Плашка "Запуск за 1 день" */}
+              {/* Информационная плашка */}
               <div 
                 className="absolute bg-white p-3 md:p-4 rounded-lg shadow-lg max-w-[200px] md:max-w-xs animate-bounce-slow parallax-element" 
                 data-speed="-10"

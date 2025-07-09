@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
+/**
+ * Интерфейс сообщения в чате
+ */
 interface Message {
   id: number;
   text: string;
@@ -7,37 +10,50 @@ interface Message {
   time: string;
 }
 
+/**
+ * Начальные сообщения для демонстрации
+ */
 const initialMessages: Message[] = [
   { id: 1, text: "Здравствуйте! Чем я могу вам помочь?", isUser: false, time: "14:30" },
 ];
 
+/**
+ * Сценарий демонстрации диалога
+ */
+const scenario = [
+  {
+    userMessage: "В комнате 304 не работает кондиционер",
+    response: "Спасибо за обращение. Я создал заявку #2451 по вашему запросу. Технический специалист подойдет в течение 30 минут."
+  },
+  {
+    userMessage: "Как скоро будет решена проблема?",
+    response: "Согласно нашему SLA, проблемы с кондиционированием решаются в течение 60 минут. Но специалист уже в пути и будет у вас примерно через 15-20 минут."
+  },
+  {
+    userMessage: "Спасибо за оперативность!",
+    response: "Всегда рады помочь! Если возникнут еще вопросы, обращайтесь в любое время."
+  }
+];
+
+/**
+ * Компонент демонстрации чата Support360
+ * Показывает интерактивный пример работы системы
+ */
 const ChatDemo: React.FC = () => {
   const [messages, setMessages] = useState<Message[]>(initialMessages);
   const [inputValue, setInputValue] = useState('');
   const [isTyping, setIsTyping] = useState(false);
   const [currentStep, setCurrentStep] = useState(0);
-  
-  const scenario = [
-    {
-      userMessage: "В комнате 304 не работает кондиционер",
-      response: "Спасибо за обращение. Я создал заявку #2451 по вашему запросу. Технический специалист подойдет в течение 30 минут."
-    },
-    {
-      userMessage: "Как скоро будет решена проблема?",
-      response: "Согласно нашему SLA, проблемы с кондиционированием решаются в течение 60 минут. Но специалист уже в пути и будет у вас примерно через 15-20 минут."
-    },
-    {
-      userMessage: "Спасибо за оперативность!",
-      response: "Всегда рады помочь! Если возникнут еще вопросы, обращайтесь в любое время."
-    }
-  ];
 
+  /**
+   * Обработчик отправки сообщения пользователем
+   */
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
     if (inputValue.trim() === '') return;
     
-    // Add user message
+    // Добавляем сообщение пользователя
     const userMessage = {
       id: messages.length + 1,
       text: inputValue,
@@ -49,7 +65,7 @@ const ChatDemo: React.FC = () => {
     setInputValue('');
     setIsTyping(true);
     
-    // Simulate response
+    // Имитируем ответ системы
     setTimeout(() => {
       const botMessage = {
         id: messages.length + 2,
@@ -63,11 +79,14 @@ const ChatDemo: React.FC = () => {
     }, 1500);
   };
 
+  /**
+   * Автоматическое воспроизведение сценария
+   */
   useEffect(() => {
     if (currentStep >= scenario.length) return;
     
     const timer = setTimeout(() => {
-      // Add user message from scenario
+      // Добавляем сообщение пользователя из сценария
       const userMessage = {
         id: messages.length + 1,
         text: scenario[currentStep].userMessage,
@@ -78,7 +97,7 @@ const ChatDemo: React.FC = () => {
       setMessages(prev => [...prev, userMessage]);
       setIsTyping(true);
       
-      // Add bot response after delay
+      // Добавляем ответ бота с задержкой
       setTimeout(() => {
         const botMessage = {
           id: messages.length + 2,
@@ -90,7 +109,7 @@ const ChatDemo: React.FC = () => {
         setMessages(prev => [...prev, botMessage]);
         setIsTyping(false);
         
-        // Move to next step in scenario
+        // Переходим к следующему шагу сценария
         setCurrentStep(prev => prev + 1);
       }, 1500);
     }, currentStep === 0 ? 2000 : 4000);
@@ -100,6 +119,7 @@ const ChatDemo: React.FC = () => {
 
   return (
     <div className="w-full max-w-md mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
+      {/* Заголовок чата */}
       <div className="bg-primary py-3 px-4 text-white flex items-center">
         <div className="h-8 w-8 rounded-full bg-white/30 flex items-center justify-center mr-3">
           <span className="text-xl">S</span>
@@ -110,6 +130,7 @@ const ChatDemo: React.FC = () => {
         </div>
       </div>
       
+      {/* Область сообщений */}
       <div className="h-72 p-4 overflow-y-auto flex flex-col space-y-3 bg-gray-50">
         {messages.map(msg => (
           <div key={msg.id} className={`flex ${msg.isUser ? 'justify-end' : 'justify-start'}`}>
@@ -126,6 +147,7 @@ const ChatDemo: React.FC = () => {
           </div>
         ))}
         
+        {/* Индикатор печати */}
         {isTyping && (
           <div className="flex justify-start">
             <div className="bg-white text-gray-800 p-3 rounded-lg shadow-sm rounded-tl-none max-w-[70%]">
@@ -139,6 +161,7 @@ const ChatDemo: React.FC = () => {
         )}
       </div>
       
+      {/* Форма ввода сообщения */}
       <form onSubmit={handleSubmit} className="p-3 border-t border-gray-200 flex">
         <input
           type="text"
@@ -150,6 +173,7 @@ const ChatDemo: React.FC = () => {
         <button 
           type="submit" 
           className="bg-primary text-white px-4 rounded-r-lg hover:bg-primary-dark transition-colors"
+          aria-label="Отправить сообщение"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="m22 2-7 20-4-9-9-4Z"/>

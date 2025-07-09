@@ -4,12 +4,16 @@ import UseCaseCard from '../components/UseCaseCard';
 import ImageOptimized from '../components/ImageOptimized';
 import { BuildingIcon, HomeIcon, ServerIcon, Calendar, ChevronLeft, ChevronRight } from 'lucide-react';
 
-// Добавляем импорты для изображений
+// Импорты изображений для кейсов использования
 import itImage from '/it.jpeg';
 import eventImage from '/event.jpg';
 import hotelImage from '/hotel.jpeg';
 import apartmentsImage from '/apartments.jpg';
 
+/**
+ * Данные кейсов использования Support360
+ * Структурированы для легкого расширения и поддержки
+ */
 const useCases = [
   {
     icon: <ServerIcon className="w-12 h-12" />,
@@ -24,7 +28,7 @@ const useCases = [
         "Полный контроль обращений: от сотрудников, жильцов, гостей, участников — всё видно, всё отслеживается"
       ],
       message: "Сотрудник: Петров П.П., Отдел: Бухгалтерия",
-      image: itImage // Используем импортированное изображение
+      image: itImage
     }
   },
   {
@@ -77,23 +81,40 @@ const useCases = [
   }
 ];
 
+/**
+ * Компонент секции кейсов использования
+ * Адаптивный дизайн с оптимизацией для мобильных устройств
+ */
 const UseCasesSection: React.FC = () => {
   const [selectedCase, setSelectedCase] = useState(useCases[0]);
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [expandedMobileCard, setExpandedMobileCard] = useState<number | null>(0);
   const [isMobile, setIsMobile] = useState(false);
 
-  useEffect(() => {
     const checkScreenSize = () => {
       setIsMobile(window.innerWidth < 768);
     };
 
     checkScreenSize();
-    window.addEventListener('resize', checkScreenSize);
+    
+    // Дебаунс для оптимизации
+    let timeoutId: NodeJS.Timeout;
+    const debouncedResize = () => {
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(checkScreenSize, 150);
+    };
+    
+    window.addEventListener('resize', debouncedResize);
 
-    return () => window.removeEventListener('resize', checkScreenSize);
+    return () => {
+      clearTimeout(timeoutId);
+      window.removeEventListener('resize', debouncedResize);
+    };
   }, []);
 
+  /**
+   * Обработчик клика по карточке кейса
+   */
   const handleCardClick = (index: number) => {
     setSelectedCase(useCases[index]);
     setSelectedIndex(index);
@@ -102,6 +123,9 @@ const UseCasesSection: React.FC = () => {
     }
   };
 
+  /**
+   * Навигация между кейсами
+   */
   const handlePrevious = () => {
     const newIndex = selectedIndex > 0 ? selectedIndex - 1 : useCases.length - 1;
     setSelectedIndex(newIndex);
@@ -123,7 +147,7 @@ const UseCasesSection: React.FC = () => {
           center
         />
 
-        {/* Карточки с вариантами использования */}
+        {/* Сетка карточек кейсов */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 ml-10 mr-10">
           {useCases.map((useCase, index) => (
             <div 
@@ -145,7 +169,7 @@ const UseCasesSection: React.FC = () => {
                 />
               </div>
 
-              {/* Мобильный выпадающий блок */}
+              {/* Выпадающий контент для мобильных устройств */}
               {isMobile && expandedMobileCard === index && (
                 <div className="mt-2 bg-white rounded-lg border border-gray-200 shadow-sm">
                   <div className="p-4">
@@ -193,11 +217,11 @@ const UseCasesSection: React.FC = () => {
           ))}
         </div>
 
-        {/* Десктопный блок с примером */}
+        {/* Детальный просмотр для десктопа */}
         {!isMobile && (
           <div className="mt-5 ml-10 mr-10 relative">
             
-            {/* Индикаторы карточек */}
+            {/* Индикаторы активного кейса */}
             <div className="text-center space-x-2">
               {useCases.map((_, index) => (
                 <button
@@ -214,7 +238,7 @@ const UseCasesSection: React.FC = () => {
             </div>
 
             <div className="mt-5">
-            {/* Стрелки навигации */}
+              {/* Кнопки навигации */}
               <button
                 onClick={handlePrevious}
                 className="absolute top-1/2 -translate-y-1/2 z-10 transition-all duration-200 hover:scale-110"
@@ -231,7 +255,7 @@ const UseCasesSection: React.FC = () => {
                 <ChevronRight className="w-10 h-10 text-gray-700" />
               </button>
 
-            <div className="bg-gray-50 rounded-xl overflow-hidden shadow-md ml-10 mr-10 relative">            
+              <div className="bg-gray-50 rounded-xl overflow-hidden shadow-md ml-10 mr-10 relative">            
               <div className="grid grid-cols-1 md:grid-cols-2">
                 <div className="p-8 md:p-12">
                   <h3 className="text-2xl font-bold text-gray-800 mb-4">{selectedCase.example.title}</h3>
@@ -274,7 +298,7 @@ const UseCasesSection: React.FC = () => {
                   </div>
                 </div>
               </div>
-              </div>
+               </div>
             </div>
           </div>
         )}

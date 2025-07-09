@@ -8,6 +8,8 @@ interface ImageOptimizedProps {
   height?: number;
   loading?: 'lazy' | 'eager';
   style?: React.CSSProperties;
+  onLoad?: () => void;
+  onError?: () => void;
 }
 
 const ImageOptimized: React.FC<ImageOptimizedProps> = ({
@@ -17,17 +19,21 @@ const ImageOptimized: React.FC<ImageOptimizedProps> = ({
   width,
   height,
   loading = 'lazy',
-  style
+  style,
+  onLoad: onLoadProp,
+  onError: onErrorProp
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
 
   const handleLoad = () => {
     setIsLoaded(true);
+    onLoadProp?.();
   };
 
   const handleError = () => {
     setHasError(true);
+    onErrorProp?.();
   };
 
   if (hasError) {
