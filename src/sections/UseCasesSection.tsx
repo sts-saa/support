@@ -91,6 +91,7 @@ const UseCasesSection: React.FC = () => {
   const [expandedMobileCard, setExpandedMobileCard] = useState<number | null>(0);
   const [isMobile, setIsMobile] = useState(false);
 
+  useEffect(() => {
     const checkScreenSize = () => {
       setIsMobile(window.innerWidth < 768);
     };
@@ -256,49 +257,49 @@ const UseCasesSection: React.FC = () => {
               </button>
 
               <div className="bg-gray-50 rounded-xl overflow-hidden shadow-md ml-10 mr-10 relative">            
-              <div className="grid grid-cols-1 md:grid-cols-2">
-                <div className="p-8 md:p-12">
-                  <h3 className="text-2xl font-bold text-gray-800 mb-4">{selectedCase.example.title}</h3>
-                  <p className="text-gray-600 mb-6">{selectedCase.example.description}</p>
-                  <ul className="space-y-3">
-                    {selectedCase.example.features.map((feature, index) => (
-                      <li key={index} className="flex items-start">
-                        <svg className="w-5 h-5 text-primary mt-1 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-                        </svg>
-                        <span className="text-gray-700">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div className="bg-primary-dark relative min-h-[300px]">                      
-                  <ImageOptimized
-                    src={selectedCase.example.image}
-                    alt={`Использование Support360 в ${selectedCase.title}`} 
-                    className="absolute inset-0 w-full h-full object-cover opacity-50"
-                    loading="lazy"
-                  />
+                <div className="grid grid-cols-1 md:grid-cols-2">
+                  <div className="p-8 md:p-12">
+                    <h3 className="text-2xl font-bold text-gray-800 mb-4">{selectedCase.example.title}</h3>
+                    <p className="text-gray-600 mb-6">{selectedCase.example.description}</p>
+                    <ul className="space-y-3">
+                      {selectedCase.example.features.map((feature, index) => (
+                        <li key={index} className="flex items-start">
+                          <svg className="w-5 h-5 text-primary mt-1 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                          </svg>
+                          <span className="text-gray-700">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className="bg-primary-dark relative min-h-[300px]">                      
+                    <ImageOptimized
+                      src={selectedCase.example.image}
+                      alt={`Использование Support360 в ${selectedCase.title}`} 
+                      className="absolute inset-0 w-full h-full object-cover opacity-50"
+                      loading="lazy"
+                    />
 
-                  <div className="absolute inset-0 flex items-center justify-center p-8">
-                    <div className="bg-white/90 p-6 rounded-lg shadow-lg max-w-sm">
-                      <div className="flex items-center mb-4">
-                        <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center mr-3">
-                          <span className="text-white font-bold">S</span>
+                    <div className="absolute inset-0 flex items-center justify-center p-8">
+                      <div className="bg-white/90 p-6 rounded-lg shadow-lg max-w-sm">
+                        <div className="flex items-center mb-4">
+                          <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center mr-3">
+                            <span className="text-white font-bold">S</span>
+                          </div>
+                          <div>
+                            <p className="font-semibold">Support360</p>
+                            <p className="text-xs text-gray-600">{selectedCase.title}</p>
+                          </div>
                         </div>
-                        <div>
-                          <p className="font-semibold">Support360</p>
-                          <p className="text-xs text-gray-600">{selectedCase.title}</p>
+                        <p className="text-gray-800 mb-4">Добрый день! Чем могу помочь?</p>
+                        <div className="bg-primary/10 p-3 rounded text-primary text-sm">
+                          {selectedCase.example.message}
                         </div>
-                      </div>
-                      <p className="text-gray-800 mb-4">Добрый день! Чем могу помочь?</p>
-                      <div className="bg-primary/10 p-3 rounded text-primary text-sm">
-                        {selectedCase.example.message}
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-               </div>
             </div>
           </div>
         )}
