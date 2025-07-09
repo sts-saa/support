@@ -99,10 +99,10 @@ const UseCasesSection: React.FC = () => {
     checkScreenSize();
     
     // Дебаунс для оптимизации
-    let timeoutId: NodeJS.Timeout;
+    let timeoutId: number;
     const debouncedResize = () => {
       clearTimeout(timeoutId);
-      timeoutId = setTimeout(checkScreenSize, 150);
+      timeoutId = window.setTimeout(checkScreenSize, 150);
     };
     
     window.addEventListener('resize', debouncedResize);

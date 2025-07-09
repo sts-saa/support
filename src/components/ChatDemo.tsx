@@ -85,7 +85,7 @@ const ChatDemo: React.FC = () => {
   useEffect(() => {
     if (currentStep >= scenario.length) return;
     
-    const timer = setTimeout(() => {
+    const timer = window.setTimeout(() => {
       // Добавляем сообщение пользователя из сценария
       const userMessage = {
         id: messages.length + 1,
@@ -98,7 +98,7 @@ const ChatDemo: React.FC = () => {
       setIsTyping(true);
       
       // Добавляем ответ бота с задержкой
-      setTimeout(() => {
+      window.setTimeout(() => {
         const botMessage = {
           id: messages.length + 2,
           text: scenario[currentStep].response,

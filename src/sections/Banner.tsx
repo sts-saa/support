@@ -19,10 +19,10 @@ const Banner: React.FC = () => {
     checkIsMobile();
     
     // Дебаунс для оптимизации производительности
-    let timeoutId: NodeJS.Timeout;
+    let timeoutId: number;
     const debouncedResize = () => {
       clearTimeout(timeoutId);
-      timeoutId = setTimeout(checkIsMobile, 150);
+      timeoutId = window.setTimeout(checkIsMobile, 150);
     };
     
     window.addEventListener('resize', debouncedResize);
