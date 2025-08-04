@@ -1,15 +1,28 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
+import AutoImport from 'unplugin-auto-import/vite'
+import Components from 'unplugin-vue-components/vite'
+import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    vue(),
+    AutoImport({
+      resolvers: [ElementPlusResolver()],
+      imports: ['vue', 'vue-router', 'pinia'],
+      dts: true,
+    }),
+    Components({
+      resolvers: [ElementPlusResolver()],
+      dts: true,
+    }),
+  ],
   build: {
     rollupOptions: {
       output: {
         manualChunks: {
-          vendor: ['react', 'react-dom'],
-          icons: ['lucide-react']
+          vendor: ['vue', 'vue-router', 'pinia'],
+          'element-plus': ['element-plus']
         }
       }
     },
@@ -23,10 +36,7 @@ export default defineConfig({
       }
     }
   },
-  optimizeDeps: {
-    exclude: ['lucide-react'],
-  },
   server: {
     compress: true
   }
-});
+})
