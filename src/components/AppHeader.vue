@@ -1,1 +1,13 @@
-{"code":"rate-limited","message":"You have hit the rate limit. Please upgrade to keep chatting.","providerLimitHit":false,"isRetryable":true}
+<template>
+  <header><!-- Ваша разметка --></header>
+</template>
+
+<script>
+export default {
+  name: 'AppHeader'
+}
+</script>
+
+<style>
+/* Ваши стили */
+</style>

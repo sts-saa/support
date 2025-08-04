@@ -7,6 +7,7 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
+    AISection: typeof import('./src/components/sections/AISection.vue')['default']
     AppFooter: typeof import('./src/components/AppFooter.vue')['default']
     AppHeader: typeof import('./src/components/AppHeader.vue')['default']
     BannerSection: typeof import('./src/components/sections/BannerSection.vue')['default']
@@ -21,8 +22,15 @@ declare module 'vue' {
     ElIcon: typeof import('element-plus/es')['ElIcon']
     ElInput: typeof import('element-plus/es')['ElInput']
     ElLink: typeof import('element-plus/es')['ElLink']
+    FAQSection: typeof import('./src/components/sections/FAQSection.vue')['default']
+    FeaturesSection: typeof import('./src/components/sections/FeaturesSection.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     ScrollToTop: typeof import('./src/components/ScrollToTop.vue')['default']
+    ServiceHistorySection: typeof import('./src/components/sections/ServiceHistorySection.vue')['default']
+    StatisticsSection: typeof import('./src/components/sections/StatisticsSection.vue')['default']
+    SupportSection: typeof import('./src/components/sections/SupportSection.vue')['default']
+    UseCasesSection: typeof import('./src/components/sections/UseCasesSection.vue')['default']
+    WorkflowSection: typeof import('./src/components/sections/WorkflowSection.vue')['default']
   }
 }

@@ -1,1 +1,7 @@
-{"code":"rate-limited","message":"You have hit the rate limit. Please upgrade to keep chatting.","providerLimitHit":false,"isRetryable":true}
+<template>
+  <section><!-- Ваша разметка --></section>
+</template>
+
+<script setup>
+// Логика компонента
+</script>
