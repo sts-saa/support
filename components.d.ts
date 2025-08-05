@@ -11,6 +11,7 @@ declare module 'vue' {
     AppFooter: typeof import('./src/components/AppFooter.vue')['default']
     AppHeader: typeof import('./src/components/AppHeader.vue')['default']
     BannerSection: typeof import('./src/components/sections/BannerSection.vue')['default']
+    Button: typeof import('./src/components/ui/Button.vue')['default']
     ChatDemo: typeof import('./src/components/ui/ChatDemo.vue')['default']
     ContactSection: typeof import('./src/components/sections/ContactSection.vue')['default']
     CookieWidget: typeof import('./src/components/CookieWidget.vue')['default']
